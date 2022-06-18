@@ -2,6 +2,9 @@ name: Node.js CI
 
 on: [push]
 
+env:
+  GIT_USERNAME: ${{ secrets.GIT_USERNAME }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -11,9 +14,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "16.x"
-      - run: |
-        # Configures git credentials
-        git config user.email {{secrets.GIT_USERNAME}}
-        git config user.name "GithubPages"
+      - run: |      
+          git config user.email $GIT_USERNAME;
+          git config user.name "GithubPages";
       - run: npm install
       - run: npm run deploy
