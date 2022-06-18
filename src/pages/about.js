@@ -1,5 +1,6 @@
 import * as React from "react";
 import "./about.css";
+import "../css/grid.css";
 import "../css/typography.css";
 import NavBar from "../molecules/NavBar";
 import SectionTitle from "../atoms/SectionTitle";
@@ -16,11 +17,8 @@ export default class AboutPage extends React.Component {
     return (
       <main className="about-main">
         <NavBar light={true} />
-        <div className="about-container">
-          <SectionTitle
-            title={`About
-              me`}
-          />
+        <div className="about-container two-column-grid">
+          <SectionTitle title="About<br/>me" />
           <div className="about-column">
             {about.intro.map((element) => {
               return (
@@ -33,12 +31,8 @@ export default class AboutPage extends React.Component {
             />
           </div>
         </div>
-        <div className="about-container">
-          <SubsectionTitle
-            title={`My
-              career`}
-            subtitle="Since 2015"
-          />
+        <div className="about-container two-column-grid">
+          <SubsectionTitle title="My<br/>career" subtitle="Since 2015" />
           <div className="about-column">
             {about.jobs.map((element) => {
               return (

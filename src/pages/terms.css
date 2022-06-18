@@ -12,11 +12,6 @@ body {
 }
 
 .terms-main>.terms-container {
-    display: flex;
-    flex-direction: row;
-    max-width: 1500px;
-    margin: 0 2rem;
-    gap: 7rem;
     color: #6C6C6C;
 }
 

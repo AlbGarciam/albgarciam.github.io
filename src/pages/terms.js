@@ -1,6 +1,7 @@
 import * as React from "react";
 import "./terms.css";
 import "../css/typography.css";
+import "../css/grid.css";
 import NavBar from "../molecules/NavBar";
 import SectionTitle from "../atoms/SectionTitle";
 import terms from "../json/terms";
@@ -10,7 +11,7 @@ export default class TermsPage extends React.Component {
     return (
       <main className="terms-main">
         <NavBar light={true} />
-        <div className="terms-container">
+        <div className="terms-container two-column-grid">
           <SectionTitle title="Terms & Conditions" />
           <div className="terms-column">
             <p className="terms-disclaimer text-medium">{terms.header}</p>

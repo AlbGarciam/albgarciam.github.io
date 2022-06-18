@@ -1,7 +1,3 @@
-body {
-    background-color: #EEEEF0;
-}
-
 .contact-main {
     width: 100%;
     display: flex;
@@ -12,11 +8,6 @@ body {
 }
 
 .contact-main>.contact-container {
-    display: flex;
-    flex-direction: row;
-    max-width: 1500px;
-    margin: 0 2rem;
-    gap: 6rem;
     color: #6C6C6C;
 }
 
@@ -36,14 +27,5 @@ body {
     .contact-main>.contact-container>.basic {
         flex-direction: column;
         gap: 1.75rem;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .contact-main>.contact-container {
-        justify-content: flex-start;
-        flex-direction: column;
-        gap: 1.75rem;
-        width: 90%;
     }
 }

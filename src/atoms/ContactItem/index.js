@@ -5,13 +5,13 @@ export default class ContactItem extends React.Component {
   buildSubtitle() {
     if (this.props.description != null) {
       return (
-        <p className="contact-item-subtitle text-light">
+        <p className="contact-item-subtitle text-regular">
           {this.props.description}
         </p>
       );
     } else if (this.props.url != null) {
       return (
-        <a className="contact-item-subtitle text-light" href={this.props.url}>
+        <a className="contact-item-subtitle text-regular" href={this.props.url}>
           {this.props.display}
         </a>
       );

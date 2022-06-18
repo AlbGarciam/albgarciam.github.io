@@ -1,9 +1,13 @@
 .section-title {
-    font-size: 8rem;
     margin: 0;
-    line-height: 6.8rem;
-    color: #131313;
     margin: 10rem 0;
+}
+
+.section-title>h1 {
+    font-size: 6rem;
+    line-height: 5rem;
+    color: #131313;
+    margin: -0.5rem 0;
 }
 
 @media screen and (max-width: 480px) {

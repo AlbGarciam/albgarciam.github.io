@@ -1,5 +1,5 @@
 import { navigate } from "gatsby";
-import React, { useState } from "react";
+import React from "react";
 import "./style.css";
 
 export default class PortfolioButton extends React.Component {
