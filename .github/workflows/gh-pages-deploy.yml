@@ -11,5 +11,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "16.x"
+      - run: |
+        # Configures git credentials
+        git config user.email {{secrets.GIT_USERNAME}}
+        git config user.name "GithubPages"
       - run: npm install
       - run: npm run deploy
