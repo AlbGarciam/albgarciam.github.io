@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: "16.x"
       - run: |      
-          git config user.email $GIT_USERNAME;
-          git config user.name "GithubPages";
+          git config --global user.email $GIT_USERNAME;
+          git config --global user.name "GithubPages";
       - run: npm install
       - run: npm run deploy
