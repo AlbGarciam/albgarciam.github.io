@@ -1,23 +1,45 @@
 import * as React from "react";
-import "./index.css";
-import "../css/typography.css";
-import NavBar from "../molecules/NavBar";
+import { ActionCard, MouseIcon, SectionTitle } from "../atoms";
+import {
+  ContactSection,
+  Footer,
+  NavBar,
+  SocialNetworkSection,
+  TaglineContainer,
+} from "../molecules";
+import Theme from "../theme";
+
+const mainStyles = {
+  width: Theme.Sizes.Dimensions.full,
+  minHeight: "100vh",
+  backgroundColor: "#000000",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "flex-start",
+};
+
+const sectionStyles = {
+  width: Theme.Sizes.Dimensions.full,
+  maxWidth: Theme.Sizes.Dimensions.maxWidth,
+  display: "flex",
+  flexDirection: "column",
+  margin: "7.5rem 0",
+  gap: "7.5rem",
+};
 
 export default class IndexPage extends React.Component {
   render() {
     return (
-      <main className="home-main">
+      <main style={mainStyles}>
         <NavBar light={false} />
-        <div className="tagline-container">
-          <div className="circle" />
-          <div className="text-container">
-            <h1 className="left-text text-bold">The way I</h1>
-            <div className="right-text-container">
-              <h2 className="right-text text-bold">code</h2>
-              <h2 className="right-text text-bold">work</h2>
-            </div>
-          </div>
+        <TaglineContainer />
+        <MouseIcon />
+        <div style={sectionStyles}>
+          <SocialNetworkSection />
+          <ContactSection />
         </div>
+        <Footer />
       </main>
     );
   }
