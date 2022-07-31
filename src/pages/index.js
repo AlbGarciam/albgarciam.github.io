@@ -1,14 +1,31 @@
 import * as React from "react";
-import { NavBar, TaglineContainer } from "../molecules";
+import { ActionCard, MouseIcon, SectionTitle } from "../atoms";
+import {
+  ContactSection,
+  Footer,
+  NavBar,
+  SocialNetworkSection,
+  TaglineContainer,
+} from "../molecules";
+import Theme from "../theme";
 
 const mainStyles = {
-  width: "100%",
+  width: Theme.Sizes.Dimensions.full,
   minHeight: "100vh",
   backgroundColor: "#000000",
   display: "flex",
   flexDirection: "column",
-  alignItems: "flex-start",
+  alignItems: "center",
   justifyContent: "flex-start",
+};
+
+const sectionStyles = {
+  width: Theme.Sizes.Dimensions.full,
+  maxWidth: Theme.Sizes.Dimensions.maxWidth,
+  display: "flex",
+  flexDirection: "column",
+  margin: "7.5rem 0",
+  gap: "7.5rem",
 };
 
 export default class IndexPage extends React.Component {
@@ -17,7 +34,12 @@ export default class IndexPage extends React.Component {
       <main style={mainStyles}>
         <NavBar light={false} />
         <TaglineContainer />
-        <div />
+        <MouseIcon />
+        <div style={sectionStyles}>
+          <ContactSection />
+          <SocialNetworkSection />
+        </div>
+        <Footer />
       </main>
     );
   }

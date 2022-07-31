@@ -9,4 +9,8 @@ const Fonts = {
 
 export default {
   h1: Fonts.bold,
+  h2: Fonts.bold,
+  title: Fonts.bold,
+  pills: Fonts.medium,
+  p: Fonts.regular,
 };

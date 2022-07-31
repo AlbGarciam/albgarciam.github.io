@@ -1,21 +1,14 @@
 import React from "react";
 import { navigate } from "gatsby";
-import logo from "../../images/site-logo.png";
+import logo from "./site-logo.png";
+
+const style = {
+  width: "auto",
+  height: "2.5rem",
+  objectFit: "contain",
+};
 
 export default class SiteIcon extends React.Component {
-  constructor() {
-    super();
-    const aspectRatio = 1504 / 64.92;
-    const height = 2.5;
-    const width = aspectRatio * height;
-
-    this.style = {
-      width: width + "rem",
-      height: height + "rem",
-      objectFit: "contain",
-    };
-  }
-
   onIconTapped() {
     navigate("/");
   }
@@ -23,7 +16,7 @@ export default class SiteIcon extends React.Component {
   render() {
     return (
       <img
-        style={this.style}
+        style={style}
         src={logo}
         alt="AlbGarciam's logo"
         onClick={this.onIconTapped.bind(this)}

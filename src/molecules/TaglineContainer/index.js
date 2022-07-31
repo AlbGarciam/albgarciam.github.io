@@ -3,7 +3,7 @@ import { Circle, Tagline } from "../../atoms";
 
 const style = {
   width: "100%",
-  height: "85%",
+  height: "85vh",
   display: "grid",
   alignItems: "center",
   justifyItems: "center",
