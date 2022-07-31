@@ -15,6 +15,7 @@ export default {
   cardActive: Colors.grayA,
   separator: Colors.grayA,
   primaryText: Colors.lightA,
+  legal: Colors.lightB,
   invertedPrimaryText: Colors.darkB,
   accent: Colors.highlightA,
 };

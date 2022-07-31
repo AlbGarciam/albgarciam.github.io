@@ -48,7 +48,7 @@ export default class ContactSection extends React.Component {
   }
 
   onDownloadResume() {
-    console.log("Download resume");
+    navigate("https://albgarciam.github.io/resume.pdf");
   }
 
   onSendEmail() {
