@@ -36,8 +36,8 @@ export default class IndexPage extends React.Component {
         <TaglineContainer />
         <MouseIcon />
         <div style={sectionStyles}>
-          <ContactSection />
           <SocialNetworkSection />
+          <ContactSection />
         </div>
         <Footer />
       </main>
