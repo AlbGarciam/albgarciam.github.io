@@ -10,8 +10,12 @@ import linkedinIconDark from "./icons/linkedin-dark.svg";
 export default class SocialNetworkSection extends React.Component {
   constructor() {
     super();
+    this.state = { width: 0 };
+  }
+
+  componentDidMount() {
     const { innerWidth: width } = window;
-    this.state = { width };
+    this.setState({ width });
     window.addEventListener("resize", this.handleResize.bind(this));
   }
 
@@ -44,6 +48,7 @@ export default class SocialNetworkSection extends React.Component {
       alignItems: "flex-start",
       marginTop: "2rem",
       flexGrow: 1,
+      overflowX: "scroll",
     };
     if (this.displayAsColumn()) {
       attributes["width"] = Theme.Sizes.Dimensions.full;
@@ -66,7 +71,7 @@ export default class SocialNetworkSection extends React.Component {
           title="Want to keep in touch?"
           subtitle="Feel free to follow me in my social networks. I usually post my code in Github and feel free to contact me on LinkedIn."
         />
-        <div style={this.scrollStyle()}>
+        <div className="horizontal-scroll" style={this.scrollStyle()}>
           <ActionCard
             image={linkedinIcon}
             imageDark={linkedinIconDark}

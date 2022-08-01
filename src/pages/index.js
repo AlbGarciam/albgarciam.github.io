@@ -10,13 +10,10 @@ import {
 import Theme from "../theme";
 
 const mainStyles = {
-  width: Theme.Sizes.Dimensions.full,
   minHeight: "100vh",
   backgroundColor: "#000000",
   display: "flex",
   flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "flex-start",
 };
 
 const sectionStyles = {
@@ -32,7 +29,7 @@ export default class IndexPage extends React.Component {
   render() {
     return (
       <main style={mainStyles}>
-        <NavBar light={false} />
+        <NavBar />
         <TaglineContainer />
         <MouseIcon />
         <div style={sectionStyles}>

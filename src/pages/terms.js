@@ -5,13 +5,10 @@ import Theme from "../theme";
 import terms from "../json/terms";
 
 const mainStyles = {
-  width: Theme.Sizes.Dimensions.full,
   minHeight: "100vh",
   backgroundColor: "#000000",
   display: "flex",
   flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "flex-start",
 };
 
 const containerStyle = {
@@ -34,8 +31,8 @@ export default class TermsPage extends React.Component {
         <NavBar />
         <div style={containerStyle}>
           <SectionTitle title="Terms & Conditions" subtitle={terms.header} />
-          <div className="terms-column">
-            <p className="terms-disclaimer text-medium">{terms.header}</p>
+          <div>
+            <p>{terms.header}</p>
             {terms.paragraphs.map((element) => {
               return <p style={paragraphStyle}>{element}</p>;
             })}

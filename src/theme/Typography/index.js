@@ -11,6 +11,7 @@ export default {
   h1: Fonts.bold,
   h2: Fonts.bold,
   title: Fonts.bold,
+  subtitle: Fonts.medium,
   pills: Fonts.medium,
   p: Fonts.regular,
 };

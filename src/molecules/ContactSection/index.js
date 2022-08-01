@@ -6,8 +6,12 @@ import Theme from "../../theme";
 export default class ContactSection extends React.Component {
   constructor() {
     super();
+    this.state = { width: 0 };
+  }
+
+  componentDidMount() {
     const { innerWidth: width } = window;
-    this.state = { width };
+    this.setState({ width });
     window.addEventListener("resize", this.handleResize.bind(this));
   }
 
@@ -40,6 +44,7 @@ export default class ContactSection extends React.Component {
       alignItems: "flex-start",
       marginTop: "2rem",
       flexGrow: 1,
+      overflowX: "scroll",
     };
     if (this.displayAsColumn()) {
       attributes["width"] = Theme.Sizes.Dimensions.full;
@@ -62,7 +67,7 @@ export default class ContactSection extends React.Component {
           title="Is it a match?"
           subtitle="If you think I can match to your company or just want to keep in touch for new projects feel free to contact me or to download my Resume."
         />
-        <div style={this.scrollStyle()}>
+        <div className="horizontal-scroll" style={this.scrollStyle()}>
           <ActionCard
             title="Download"
             subtitle="Resume"

@@ -10,14 +10,10 @@ export default class MouseIcon extends React.Component {
     const width = aspectRatio * height;
 
     this.style = {
-      width: width + "rem",
+      width: "auto",
       height: height + "rem",
       objectFit: "contain",
     };
-  }
-
-  onIconTapped() {
-    navigate("/");
   }
 
   render() {

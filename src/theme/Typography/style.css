@@ -21,6 +21,7 @@
 body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 html {
@@ -29,30 +30,35 @@ html {
 
 @media screen and (max-width: 1200px) {
     html {
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 
 @media screen and (max-width: 1024px) {
     html {
-        font-size: 12px;
+        font-size: 16px;
     }
 }
 
 @media screen and (max-width: 768px) {
     html {
-        font-size: 8px;
+        font-size: 12px;
     }
 }
 
 @media screen and (max-width: 480px) {
     html {
-        font-size: 6px;
+        font-size: 12px;
     }
 }
 
 @media screen and (max-width: 320px) {
     html {
-        font-size: 4px;
+        font-size: 12px;
     }
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
 }
