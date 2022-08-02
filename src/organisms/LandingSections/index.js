@@ -4,6 +4,7 @@ import {
   ContactSection,
   HorizontalCarousel,
   SocialNetworkSection,
+  ProjectCard,
 } from "../../molecules";
 import { ActionCard } from "../../atoms";
 import Theme from "../../theme";
@@ -32,6 +33,42 @@ export default class LandingSections extends React.Component {
     return (
       <div style={style}>
         <div style={alignStyles}>
+          <HorizontalCarousel
+            title="Projects"
+            subtitle="Different projects with different requirements for different sectors. But all have something in common: Passion for the development."
+          >
+            <ProjectCard
+              image={linkedinIcon}
+              imageDark={linkedinIconDark}
+              imageAlt="LinkedIn icon"
+              title="Connect on"
+              subtitle="LinkedIn"
+              onClick={() => {
+                navigate("https://www.linkedin.com/in/alberto-garcia-munoz/");
+              }}
+            />
+
+            <ProjectCard
+              image={linkedinIcon}
+              imageDark={linkedinIconDark}
+              imageAlt="LinkedIn icon"
+              title="Connect on"
+              subtitle="LinkedIn"
+              onClick={() => {
+                navigate("https://www.linkedin.com/in/alberto-garcia-munoz/");
+              }}
+            />
+            <ProjectCard
+              image={linkedinIcon}
+              imageDark={linkedinIconDark}
+              imageAlt="LinkedIn icon"
+              title="Connect on"
+              subtitle="LinkedIn"
+              onClick={() => {
+                navigate("https://www.linkedin.com/in/alberto-garcia-munoz/");
+              }}
+            />
+          </HorizontalCarousel>
           <HorizontalCarousel
             title="Want to keep in touch?"
             subtitle="Feel free to follow me in my social networks. I usually post my code in Github and feel free to contact me on LinkedIn."
