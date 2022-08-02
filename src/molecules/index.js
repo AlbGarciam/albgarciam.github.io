@@ -1,13 +1,6 @@
 import NavBar from "./NavBar";
 import TaglineContainer from "./TaglineContainer";
-import ContactSection from "./ContactSection";
-import SocialNetworkSection from "./SocialNetworkSection";
+import HorizontalCarousel from "./HorizontalCarousel";
 import Footer from "./Footer";
 
-export {
-  NavBar,
-  TaglineContainer,
-  ContactSection,
-  SocialNetworkSection,
-  Footer,
-};
+export { NavBar, TaglineContainer, HorizontalCarousel, Footer };

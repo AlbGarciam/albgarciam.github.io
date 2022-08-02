@@ -28,12 +28,16 @@ export default class ActionCard extends React.Component {
   backgroundStyle() {
     const { hover } = this.state;
     return {
+      display: "inline-block",
+      position: "relative",
+      width: "10rem",
       backgroundColor: hover ? Theme.Colors.cardActive : Theme.Colors.card,
       borderRadius: Theme.Sizes.Dimensions.radius,
       transition: "0.25s",
       padding: "2.5rem 2rem",
       maxWidth: "15rem",
       flex: "1",
+      marginLeft: "2rem",
     };
   }
 

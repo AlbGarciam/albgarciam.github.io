@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ActionCard, MouseIcon, SectionTitle } from "../atoms";
+import { MouseIcon } from "../atoms";
 import {
   ContactSection,
   Footer,
@@ -7,6 +7,7 @@ import {
   SocialNetworkSection,
   TaglineContainer,
 } from "../molecules";
+import { LandingSections } from "../organisms";
 import Theme from "../theme";
 
 const mainStyles = {
@@ -16,15 +17,6 @@ const mainStyles = {
   flexDirection: "column",
 };
 
-const sectionStyles = {
-  width: Theme.Sizes.Dimensions.full,
-  maxWidth: Theme.Sizes.Dimensions.maxWidth,
-  display: "flex",
-  flexDirection: "column",
-  margin: "7.5rem 0",
-  gap: "7.5rem",
-};
-
 export default class IndexPage extends React.Component {
   render() {
     return (
@@ -32,10 +24,7 @@ export default class IndexPage extends React.Component {
         <NavBar />
         <TaglineContainer />
         <MouseIcon />
-        <div style={sectionStyles}>
-          <SocialNetworkSection />
-          <ContactSection />
-        </div>
+        <LandingSections />
         <Footer />
       </main>
     );
