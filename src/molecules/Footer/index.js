@@ -18,7 +18,7 @@ const footerAlignStyle = {
 };
 
 const topLineStyle = {
-  backgroundColor: Theme.Colors.separator,
+  backgroundColor: "clear",
   height: Theme.Sizes.Dimensions.xxxs,
 };
 

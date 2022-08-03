@@ -29,13 +29,15 @@ export default class TermsPage extends React.Component {
     return (
       <main style={mainStyles}>
         <NavBar />
-        <div style={containerStyle}>
-          <SectionTitle title="Terms & Conditions" subtitle={terms.header} />
-          <div>
-            <p>{terms.header}</p>
-            {terms.paragraphs.map((element) => {
-              return <p style={paragraphStyle}>{element}</p>;
-            })}
+        <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
+          <div style={containerStyle}>
+            <SectionTitle title="Terms & Conditions" subtitle={terms.header} />
+            <div>
+              <p>{terms.header}</p>
+              {terms.paragraphs.map((element) => {
+                return <p style={paragraphStyle}>{element}</p>;
+              })}
+            </div>
           </div>
         </div>
         <Footer />

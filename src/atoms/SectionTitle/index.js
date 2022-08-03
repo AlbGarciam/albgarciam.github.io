@@ -5,7 +5,7 @@ const style = (opacity) => {
   return {
     display: "flex",
     flexDirection: "column",
-    gap: "1.25rem",
+    gap: "2rem",
     maxWidth: "30rem",
     gridArea: "1/1/1/1",
     opacity,
