@@ -3,7 +3,6 @@ import { FooterItem, SiteIcon } from "../../atoms";
 import Theme from "../../theme";
 
 const footerStyle = {
-  width: Theme.Sizes.Dimensions.full,
   display: "flex",
   justifyContent: "center",
   margin: Theme.Sizes.Spacings.xxxs + " 0",
@@ -16,12 +15,10 @@ const footerAlignStyle = {
   width: Theme.Sizes.Dimensions.full,
   gap: Theme.Sizes.Spacings.xxxs,
   margin: "0 " + Theme.Sizes.Spacings.m,
-  alignItems: "center",
 };
 
 const topLineStyle = {
-  backgroundColor: Theme.Colors.separator,
-  width: Theme.Sizes.Dimensions.full,
+  backgroundColor: "clear",
   height: Theme.Sizes.Dimensions.xxxs,
 };
 

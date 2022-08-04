@@ -6,6 +6,7 @@ import Pill from "./Pill";
 import SectionTitle from "./SectionTitle";
 import ActionCard from "./ActionCard";
 import FooterItem from "./FooterItem";
+import ProjectHeader from "./ProjectHeader";
 
 export {
   SiteIcon,
@@ -16,4 +17,5 @@ export {
   SectionTitle,
   ActionCard,
   FooterItem,
+  ProjectHeader,
 };

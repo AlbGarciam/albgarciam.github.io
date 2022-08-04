@@ -1,0 +1,30 @@
+{
+  "projects": [
+    {
+      "background": "/images/nalu-background.jpg",
+      "icon": {
+        "src": "/images/nalu-icon.svg",
+        "alt": "Pacer app icon"
+      },
+      "name": "Nalu",
+      "year": "2019",
+      "tags": ["iOS", "Application"]
+    },
+    {
+      "background": "/images/pacer-background.jpg",
+      "icon": {
+        "src": "/images/pacer-icon.svg",
+        "alt": "Pacer app icon"
+      },
+      "name": "Pacer",
+      "year": "2022",
+      "tags": ["watchOS", "Application"]
+    },
+    {
+      "background": "/images/pacer-background.jpg",
+      "name": "Dependency Injection",
+      "year": "2022",
+      "tags": ["iOS/macOS", "Library"]
+    }
+  ]
+}

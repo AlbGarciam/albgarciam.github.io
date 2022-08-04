@@ -1,5 +1,6 @@
 import React from "react";
 import Theme from "../../theme";
+import { navigate } from "gatsby";
 
 const containerStyle = {
   display: "flex",
@@ -28,12 +29,16 @@ export default class ActionCard extends React.Component {
   backgroundStyle() {
     const { hover } = this.state;
     return {
+      display: "inline-block",
+      position: "relative",
+      width: "10rem",
       backgroundColor: hover ? Theme.Colors.cardActive : Theme.Colors.card,
       borderRadius: Theme.Sizes.Dimensions.radius,
       transition: "0.25s",
       padding: "2.5rem 2rem",
       maxWidth: "15rem",
       flex: "1",
+      marginLeft: "2rem",
     };
   }
 
@@ -76,24 +81,25 @@ export default class ActionCard extends React.Component {
   }
 
   render() {
+    const { title, subtitle, icon, link } = this.props.element
     return (
       <div
         style={this.backgroundStyle()}
         onMouseEnter={this.onMouseEnter.bind(this)}
         onMouseLeave={this.onMouseLeave.bind(this)}
-        onClick={this.onClick.bind(this)}
+        onClick={() => { navigate(link) }}
       >
         <div style={containerStyle}>
-          {this.props.image != undefined && (
+          {icon != null && (
             <img
               style={this.iconStyle()}
-              src={this.state.hover ? this.props.imageDark : this.props.image}
-              alt={this.props.imageAlt}
+              src={this.state.hover ? icon.hover : icon.src}
+              alt={icon.alt}
             />
           )}
           <div>
-            <p style={this.titleStyle()}>{this.props.title}</p>
-            <p style={this.subtitleStyle()}>{this.props.subtitle}</p>
+            <p style={this.titleStyle()}>{title}</p>
+            <p style={this.subtitleStyle()}>{subtitle}</p>
           </div>
         </div>
       </div>

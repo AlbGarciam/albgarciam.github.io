@@ -1,11 +1,15 @@
 import React from "react";
 import Theme from "../../theme";
 
-const style = {
-  display: "flex",
-  flexDirection: "column",
-  gap: "1.25rem",
-  maxWidth: "30rem",
+const style = (opacity) => {
+  return {
+    display: "flex",
+    flexDirection: "column",
+    gap: "2rem",
+    maxWidth: "30rem",
+    gridArea: "1/1/1/1",
+    opacity,
+  };
 };
 
 const titleStyle = {
@@ -25,7 +29,7 @@ const subtitleStyle = {
 export default class SectionTitle extends React.Component {
   render() {
     return (
-      <div style={style}>
+      <div style={style(this.props.opacity)} ref={this.props.innerRef}>
         <h2 style={titleStyle}>{this.props.title}</h2>
         <p style={subtitleStyle}>{this.props.subtitle}</p>
       </div>
