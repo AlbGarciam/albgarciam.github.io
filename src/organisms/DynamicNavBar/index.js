@@ -1,5 +1,5 @@
 import React from "react";
-import { DesktopNavBar } from "../../molecules";
+import { DesktopNavBar, MobileNavBar } from "../../molecules";
 import Theme from "../../theme";
 
 const internalStyles = {
@@ -27,7 +27,7 @@ export default class DynamicNavBar extends React.Component {
     return (
       <div style={style}>
         {!isMobile && <DesktopNavBar style={{ height: "100%" }} />}
-        {/* Pending to include mobile NavBar */}
+        {isMobile && <MobileNavBar style={{ width: "100%" }} />}
       </div>
     );
   }

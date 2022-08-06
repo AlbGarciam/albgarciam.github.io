@@ -8,6 +8,7 @@ import ActionCard from "./ActionCard";
 import FooterItem from "./FooterItem";
 import ProjectHeader from "./ProjectHeader";
 import SocialFooter from "./SocialFooter";
+import TwoStateIcon from "./TwoStateIcon";
 
 export {
   SiteIcon,
@@ -19,5 +20,6 @@ export {
   ActionCard,
   FooterItem,
   ProjectHeader,
-  SocialFooter
+  SocialFooter,
+  TwoStateIcon
 };

@@ -42,15 +42,17 @@ export default class IndexPage extends React.Component {
   }
 
   render() {
-    const width = (this.state.width < 768 ? "100%" : "50%")
+    const isMobile = this.state.width < 768
     const maxWidth = this.state.width > 768 ? "60%" : null
     return (
       <main style={mainStyles}>
         <TwoToneBackground style={backgroundStyle} image="/images/hello-world.svg" />
-        <div style={containerStyles}>
+        {!isMobile && <div style={containerStyles}>
           <DynamicNavBar />
           <Heading style={{ maxWidth }} content={landing.header} />
-        </div>
+        </div>}
+        {isMobile && <DynamicNavBar style={{ margin: "2.5rem" }} />}
+        {isMobile && <Heading style={{ margin: "2.5rem", zIndex: 99 }} content={landing.header} />}
       </main>
     );
   }
