@@ -4,7 +4,7 @@ import Theme from "../../theme";
 
 const internalStyles = {
   backgroundColor: "clear",
-  height: "100%"
+  height: "95vh"
 }
 
 export default class DynamicNavBar extends React.Component {
@@ -22,8 +22,14 @@ export default class DynamicNavBar extends React.Component {
   }
 
   render() {
-    const style = { ...this.props.style, ...internalStyles }
     const isMobile = this.state.width <= 768
+    let style = {}
+    if (!isMobile) {
+      style = { ...this.props.style, ...internalStyles }
+    } else {
+      style = { ...this.props.style }
+    }
+
     return (
       <div style={style}>
         {!isMobile && <DesktopNavBar style={{ height: "100%" }} />}

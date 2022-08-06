@@ -13,7 +13,7 @@ const mainStyles = {
 };
 
 const backgroundStyle = {
-  position: "absolute",
+  position: "fixed",
   top: "0", left: "0", right: "0", bottom: "0",
   zIndex: "0"
 }
@@ -22,7 +22,7 @@ const containerStyles = {
   display: "flex",
   alignItems: "center",
   gap: "2.5rem",
-  margin: "2.5rem",
+  margin: "2.5rem 2.5rem 2.5rem 12rem",
   height: "100%",
   zIndex: "99999"
 }
@@ -47,12 +47,14 @@ export default class IndexPage extends React.Component {
     return (
       <main style={mainStyles}>
         <TwoToneBackground style={backgroundStyle} image="/images/hello-world.svg" />
-        {!isMobile && <div style={containerStyles}>
-          <DynamicNavBar />
-          <Heading style={{ maxWidth }} content={landing.header} />
+
+        {!isMobile && <DynamicNavBar style={{ padding: "2.5vh 2.5rem", position: "fixed", top: 0, left: 0 }} />}
+        {!isMobile && <div style={{ ...containerStyles, maxWidth }}>
+          <Heading content={landing.header} />
         </div>}
+
         {isMobile && <DynamicNavBar style={{ margin: "2.5rem" }} />}
-        {isMobile && <Heading style={{ margin: "2.5rem", zIndex: 99 }} content={landing.header} />}
+        {isMobile && <Heading style={{ margin: "auto 2.5rem", zIndex: 99 }} content={landing.header} />}
       </main>
     );
   }
