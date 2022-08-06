@@ -9,6 +9,7 @@ import FooterItem from "./FooterItem";
 import ProjectHeader from "./ProjectHeader";
 import SocialFooter from "./SocialFooter";
 import TwoStateIcon from "./TwoStateIcon";
+import NavigateButton from "./NavigateButton";
 
 export {
   SiteIcon,
@@ -21,5 +22,6 @@ export {
   FooterItem,
   ProjectHeader,
   SocialFooter,
-  TwoStateIcon
+  TwoStateIcon,
+  NavigateButton
 };

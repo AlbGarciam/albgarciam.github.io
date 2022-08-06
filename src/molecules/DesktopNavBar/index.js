@@ -52,7 +52,7 @@ export default class DesktopNavBar extends React.Component {
     const fontSize = Math.min(2, 2 * this.state.height / 748) + "rem"
     return (
       <div style={style}>
-        <img style={iconStyle} src="/icon-logo.svg" alt="AlbGarciam's logo" />
+        <a href="/"><img style={iconStyle} src="/icon-logo.svg" alt="AlbGarciam's logo" /></a>
         <div style={{
           display: "flex",
           flexDirection: "column",

@@ -93,9 +93,10 @@ export default class MobileNavBar extends React.Component {
             opacity: this.state.extended ? "1" : "0",
             transition: "all .25s ease-in-out",
           }}>
-            <a href="/projects" style={{ ...linkStyle }}>PROJECTS</a>
-            <a href="/blog" style={{ ...linkStyle }}>BLOG</a>
-            <a href="/about" style={{ ...linkStyle }}>ABOUT</a>
+            <a href="/" style={{ ...linkStyle }}>Home</a>
+            <a href="/projects" style={{ ...linkStyle }}>Projects</a>
+            <a href="/blog" style={{ ...linkStyle }}>Blog</a>
+            <a href="/about" style={{ ...linkStyle }}>About</a>
             <SocialFooter style={{ visibility: this.state.extended ? "visible" : "hidden" }} />
           </div>
         </div>

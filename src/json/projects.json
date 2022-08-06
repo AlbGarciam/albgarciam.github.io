@@ -1,30 +1,40 @@
 {
   "projects": [
     {
-      "background": "/images/nalu-background.jpg",
-      "icon": {
-        "src": "/images/nalu-icon.svg",
-        "alt": "Pacer app icon"
+      "header": {
+        "title": "Nalu App",
+        "preTitle": "iOS music application",
+        "subtitle": "Nalu is an iOS app that, using bluetooth only, enables you to create a shared playlist between you and your friends. It is meant for those users who are aware of sharing his phone with others.",
+        "button": {
+          "text": "Discover more",
+          "link": "https://nalu.gitlab.io"
+        }
       },
-      "name": "Nalu",
-      "year": "2019",
-      "tags": ["iOS", "Application"]
+      "image": "/images/nalu-icon.svg"
     },
     {
-      "background": "/images/pacer-background.jpg",
-      "icon": {
-        "src": "/images/pacer-icon.svg",
-        "alt": "Pacer app icon"
-      },
-      "name": "Pacer",
-      "year": "2022",
-      "tags": ["watchOS", "Application"]
+      "image": "/images/pacer-icon.svg",
+      "header": {
+        "title": "Pacer App",
+        "preTitle": "watchOS health application",
+        "subtitle": "Pacer helps you to keep the pace during your running workouts. It is heavily integrated with HealthKit to provide metrics and determine when to execute each step during the workout.",
+        "button": {
+          "text": "Download it",
+          "link": "https://apps.apple.com/us/app/pacer-stay-on-pace/id1627313100"
+        }
+      }
     },
     {
-      "background": "/images/pacer-background.jpg",
-      "name": "Dependency Injection",
-      "year": "2022",
-      "tags": ["iOS/macOS", "Library"]
+      "image": "/images/dependency-injection.svg",
+      "header": {
+        "title": "Dependency injection",
+        "preTitle": "iOS/macOS/watchOS library",
+        "subtitle": "DependencyInjection allows you to make the injection of your contracts in your code in a simplified manner. You no longer need a builder or passing the dependencies of a class through the initializer.",
+        "button": {
+          "text": "Discover more",
+          "link": "https://github.com/AlbGarciam/DependencyInjection"
+        }
+      }
     }
   ]
 }

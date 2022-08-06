@@ -4,7 +4,8 @@ import Theme from "../../theme";
 
 const internalStyles = {
   backgroundColor: "clear",
-  height: "95vh"
+  height: "95vh",
+  zIndex: 9999
 }
 
 export default class DynamicNavBar extends React.Component {

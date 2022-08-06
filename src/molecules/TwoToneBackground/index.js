@@ -15,7 +15,8 @@ const twoToneBackground = {
 
 const imageStyle = {
   height: "auto",
-  margin: "0 4rem"
+  margin: "0 4rem",
+  userSelect: "none"
 }
 
 export default class TwoToneBackground extends React.Component {
