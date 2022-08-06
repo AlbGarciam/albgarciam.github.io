@@ -1,3 +1,4 @@
 import LandingSections from "./LandingSections";
+import DynamicNavBar from "./DynamicNavBar";
 
-export { LandingSections };
+export { LandingSections, DynamicNavBar };

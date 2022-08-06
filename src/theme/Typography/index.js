@@ -14,4 +14,8 @@ export default {
   subtitle: Fonts.medium,
   pills: Fonts.medium,
   p: Fonts.regular,
+  navigation: Fonts.light,
+  headingTitle: Fonts.medium,
+  headingPreTitle: Fonts.medium,
+  headingSubtitle: Fonts.regular,
 };
