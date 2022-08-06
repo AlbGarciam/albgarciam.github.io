@@ -1,7 +1,7 @@
 import * as React from "react";
 import { DynamicNavBar } from "../organisms"
 import { TwoToneBackground, Heading } from "../molecules";
-import landing from "../json/landing.json"
+import landing from "../json/about-demo.json"
 import Theme from "../theme";
 
 const mainStyles = {
@@ -27,7 +27,7 @@ const containerStyles = {
   zIndex: "99999"
 }
 
-export default class IndexPage extends React.Component {
+export default class AboutPage extends React.Component {
   state = { width: 0 };
 
   componentDidMount() {
@@ -46,7 +46,7 @@ export default class IndexPage extends React.Component {
     const maxWidth = this.state.width > 768 ? "60%" : null
     return (
       <main style={mainStyles}>
-        <TwoToneBackground style={backgroundStyle} image="/images/hello-world.svg" />
+        <TwoToneBackground style={backgroundStyle} image="/images/thunder.svg" />
 
         {!isMobile && <DynamicNavBar style={{ padding: "2.5vh 2.5rem", position: "fixed", top: 0, left: 0 }} />}
         {!isMobile && <div style={{ ...containerStyles, maxWidth }}>

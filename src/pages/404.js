@@ -1,54 +1,61 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import * as React from "react";
+import { DynamicNavBar } from "../organisms"
+import { TwoToneBackground, Heading } from "../molecules";
+import landing from "../json/404.json"
+import Theme from "../theme";
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
+const mainStyles = {
+  position: "absolute",
+  top: "0", left: "0", right: "0", bottom: "0",
+  backgroundColor: "#000000",
+  display: "flex",
+  flexDirection: "column",
+};
 
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
+const backgroundStyle = {
+  position: "fixed",
+  top: "0", left: "0", right: "0", bottom: "0",
+  zIndex: "0"
 }
 
-// markup
-const NotFoundPage = () => {
-  return (
-    <main style={pageStyles}>
-      <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
-  )
+const containerStyles = {
+  display: "flex",
+  alignItems: "center",
+  gap: "2.5rem",
+  margin: "2.5rem 2.5rem 2.5rem 12rem",
+  height: "100%",
+  zIndex: "99999"
 }
 
-export default NotFoundPage
+export default class NotFoundPage extends React.Component {
+  state = { width: 0 };
+
+  componentDidMount() {
+    const { innerWidth: width } = window;
+    this.setState({ width });
+    window.addEventListener("resize", this.handleResize.bind(this));
+  }
+
+  handleResize() {
+    const { innerWidth: width } = window;
+    this.setState({ width });
+  }
+
+  render() {
+    const isMobile = this.state.width < 768
+    const maxWidth = this.state.width > 768 ? "60%" : null
+    return (
+      <main style={mainStyles}>
+        <TwoToneBackground style={backgroundStyle} image="/images/thunder.svg" />
+
+        {!isMobile && <DynamicNavBar style={{ padding: "2.5vh 2.5rem", position: "fixed", top: 0, left: 0 }} />}
+        {!isMobile && <div style={{ ...containerStyles, maxWidth }}>
+          <Heading content={landing.header} />
+        </div>}
+
+        {isMobile && <DynamicNavBar style={{ margin: "2.5rem" }} />}
+        {isMobile && <Heading style={{ margin: "auto 2.5rem", zIndex: 99 }} content={landing.header} />}
+      </main>
+    );
+  }
+}

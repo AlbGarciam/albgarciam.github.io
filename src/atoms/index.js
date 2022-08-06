@@ -7,6 +7,9 @@ import SectionTitle from "./SectionTitle";
 import ActionCard from "./ActionCard";
 import FooterItem from "./FooterItem";
 import ProjectHeader from "./ProjectHeader";
+import SocialFooter from "./SocialFooter";
+import TwoStateIcon from "./TwoStateIcon";
+import NavigateButton from "./NavigateButton";
 
 export {
   SiteIcon,
@@ -18,4 +21,7 @@ export {
   ActionCard,
   FooterItem,
   ProjectHeader,
+  SocialFooter,
+  TwoStateIcon,
+  NavigateButton
 };

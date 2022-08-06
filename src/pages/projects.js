@@ -1,7 +1,7 @@
 import * as React from "react";
-import { DynamicNavBar } from "../organisms"
+import { DynamicNavBar, ProjectSection } from "../organisms"
 import { TwoToneBackground, Heading } from "../molecules";
-import landing from "../json/landing.json"
+import projectsJSON from "../json/projects.json"
 import Theme from "../theme";
 
 const mainStyles = {
@@ -12,22 +12,13 @@ const mainStyles = {
   flexDirection: "column",
 };
 
-const backgroundStyle = {
-  position: "fixed",
-  top: "0", left: "0", right: "0", bottom: "0",
-  zIndex: "0"
-}
-
 const containerStyles = {
   display: "flex",
-  alignItems: "center",
-  gap: "2.5rem",
-  margin: "2.5rem 2.5rem 2.5rem 12rem",
-  height: "100%",
-  zIndex: "99999"
+  flexDirection: "column",
+  gap: "0",
 }
 
-export default class IndexPage extends React.Component {
+export default class ProjectsPage extends React.Component {
   state = { width: 0 };
 
   componentDidMount() {
@@ -43,18 +34,14 @@ export default class IndexPage extends React.Component {
 
   render() {
     const isMobile = this.state.width < 768
-    const maxWidth = this.state.width > 768 ? "60%" : null
+    const { projects } = projectsJSON
     return (
       <main style={mainStyles}>
-        <TwoToneBackground style={backgroundStyle} image="/images/hello-world.svg" />
-
         {!isMobile && <DynamicNavBar style={{ padding: "2.5vh 2.5rem", position: "fixed", top: 0, left: 0 }} />}
-        {!isMobile && <div style={{ ...containerStyles, maxWidth }}>
-          <Heading content={landing.header} />
-        </div>}
-
         {isMobile && <DynamicNavBar style={{ margin: "2.5rem" }} />}
-        {isMobile && <Heading style={{ margin: "auto 2.5rem", zIndex: 99 }} content={landing.header} />}
+        <div style={containerStyles}>
+          {projects.map(element => { return <ProjectSection element={element} /> })}
+        </div>
       </main>
     );
   }

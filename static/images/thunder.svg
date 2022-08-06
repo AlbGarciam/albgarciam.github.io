@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" width="589" height="432.703" viewBox="0 0 589 432.703">
+    <defs>
+        <filter id="primary" x="98.907" y="8.251" width="392.286" height="256.855" filterUnits="userSpaceOnUse">
+            <feOffset input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="14.5" result="blur"/>
+            <feFlood flood-color="#f8f8f8"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="primary-2" x="170.435" y="98.629" width="249.949" height="334.074" filterUnits="userSpaceOnUse">
+            <feOffset dy="3" input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="24.5" result="blur-2"/>
+            <feFlood flood-color="#ffe200"/>
+            <feComposite operator="in" in2="blur-2"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="primary-3" x="98.907" y="8.251" width="392.286" height="256.855" filterUnits="userSpaceOnUse">
+            <feOffset input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="14.5" result="blur-3"/>
+            <feFlood flood-color="#f8f8f8"/>
+            <feComposite operator="in" in2="blur-3"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="primary-4" x="170.435" y="98.629" width="249.949" height="334.074" filterUnits="userSpaceOnUse">
+            <feOffset dy="3" input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="24.5" result="blur-4"/>
+            <feFlood flood-color="#ffe200"/>
+            <feComposite operator="in" in2="blur-4"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g id="Grupo_78" data-name="Grupo 78" transform="translate(-1146 -335)">
+        <rect id="Rectángulo_54" data-name="Rectángulo 54" width="589" height="410" transform="translate(1146 335)" fill="none"/>
+        <g id="thunder" transform="translate(1140.213 235.572)">
+            <g transform="matrix(1, 0, 0, 1, 5.79, 99.43)" filter="url(#primary)">
+                <path id="primary-5" data-name="primary" d="M402.146,317.845a67.3,67.3,0,0,0-16.825-132.412,68.645,68.645,0,0,0-15.647,2.019A84.125,84.125,0,0,0,218.25,222.616a50.475,50.475,0,1,0-18,97.416" transform="translate(-5.79 -99.43)" fill="none" stroke="#f8f8f8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </g>
+            <g transform="matrix(1, 0, 0, 1, 5.79, 99.43)" filter="url(#primary-2)">
+                <path id="primary-6" data-name="primary" d="M452.561,602.449l43.24,14.3v71.169l57.709-99.6-28.771-14.3V502.845Z" transform="translate(-207.63 -332.72)" fill="none" stroke="#ffe200" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </g>
+            <g transform="matrix(1, 0, 0, 1, 5.79, 99.43)" filter="url(#primary-3)">
+                <path id="primary-7" data-name="primary" d="M402.146,317.845a67.3,67.3,0,0,0-16.825-132.412,68.645,68.645,0,0,0-15.647,2.019A84.125,84.125,0,0,0,218.25,222.616a50.475,50.475,0,1,0-18,97.416" transform="translate(-5.79 -99.43)" fill="none" stroke="#f8f8f8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </g>
+            <g transform="matrix(1, 0, 0, 1, 5.79, 99.43)" filter="url(#primary-4)">
+                <path id="primary-8" data-name="primary" d="M452.561,602.449l43.24,14.3v71.169l57.709-99.6-28.771-14.3V502.845Z" transform="translate(-207.63 -332.72)" fill="none" stroke="#ffe200" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </g>
+        </g>
+    </g>
+</svg>
