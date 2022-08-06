@@ -5,7 +5,7 @@
     "subtitle": "Okay, you want to know more about me. You'll be able to see my career experience here. But, until then you can download my resume if you want",
     "button": {
       "text": "Download Resume",
-      "link": "/resume.pdg"
+      "link": "/resume.pdf"
     }
   }
 }
