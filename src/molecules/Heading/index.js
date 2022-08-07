@@ -8,6 +8,7 @@ const internalStyles = {
   alignItems: "flex-start",
   justifyContent: "flex-start",
   color: Theme.Colors.primaryText,
+  overflowWrap: "break-word",
   gap: "1rem"
 }
 
@@ -20,6 +21,7 @@ const preTitleStyle = {
 const titleStyle = {
   margin: "0",
   fontFamily: Theme.Fonts.headingTitle,
+  wordBreak: "break-all",
   fontSize: "6.5rem"
 }
 

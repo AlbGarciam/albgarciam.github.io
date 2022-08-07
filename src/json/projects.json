@@ -2,7 +2,7 @@
   "projects": [
     {
       "header": {
-        "title": "Nalu App",
+        "title": "Nalu",
         "preTitle": "iOS music application",
         "subtitle": "Nalu is an iOS app that, using bluetooth only, enables you to create a shared playlist between you and your friends. It is meant for those users who are aware of sharing his phone with others.",
         "button": {
@@ -15,7 +15,7 @@
     {
       "image": "/images/pacer-icon.svg",
       "header": {
-        "title": "Pacer App",
+        "title": "Pacer",
         "preTitle": "watchOS health application",
         "subtitle": "Pacer helps you to keep the pace during your running workouts. It is heavily integrated with HealthKit to provide metrics and determine when to execute each step during the workout.",
         "button": {
@@ -27,8 +27,8 @@
     {
       "image": "/images/dependency-injection.svg",
       "header": {
-        "title": "Dependency injection",
-        "preTitle": "iOS/macOS/watchOS library",
+        "title": "DependencyInjection",
+        "preTitle": "Swift library",
         "subtitle": "DependencyInjection allows you to make the injection of your contracts in your code in a simplified manner. You no longer need a builder or passing the dependencies of a class through the initializer.",
         "button": {
           "text": "Discover more",
