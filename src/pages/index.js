@@ -1,8 +1,5 @@
 import * as React from "react";
-import { DynamicNavBar } from "../organisms"
-import { TwoToneBackground, Heading } from "../molecules";
-import landing from "../json/landing.json"
-import Theme from "../theme";
+import { Navigation } from "../organisms";
 
 const mainStyles = {
   position: "absolute",
@@ -12,49 +9,33 @@ const mainStyles = {
   flexDirection: "column",
 };
 
-const backgroundStyle = {
-  position: "fixed",
-  top: "0", left: "0", right: "0", bottom: "0",
-  zIndex: "0"
-}
-
-const containerStyles = {
-  display: "flex",
-  alignItems: "center",
-  gap: "2.5rem",
-  margin: "2.5rem 2.5rem 2.5rem 12rem",
-  height: "100%",
-  zIndex: "99999"
-}
-
 export default class IndexPage extends React.Component {
-  state = { width: 0 };
+  state = { currentStep: 1, totalSteps: 3 };
 
-  componentDidMount() {
-    const { innerWidth: width } = window;
-    this.setState({ width });
-    window.addEventListener("resize", this.handleResize.bind(this));
+  downAction() {
+    let nextCurrentStep = this.state.currentStep + 1
+    if (nextCurrentStep > this.state.totalSteps) {
+      nextCurrentStep = 1
+    }
+    this.setState({ currentStep: nextCurrentStep })
   }
 
-  handleResize() {
-    const { innerWidth: width } = window;
-    this.setState({ width });
+  upAction() {
+    let nextCurrentStep = this.state.currentStep - 1
+    if (nextCurrentStep < 1) {
+      nextCurrentStep = this.state.totalSteps
+    }
+    this.setState({ currentStep: nextCurrentStep })
   }
 
   render() {
-    const isMobile = this.state.width < 768
-    const maxWidth = this.state.width > 768 ? "60%" : null
     return (
       <main style={mainStyles}>
-        <TwoToneBackground style={backgroundStyle} image="/images/hello-world.svg" />
-
-        {!isMobile && <DynamicNavBar style={{ padding: "2.5vh 2.5rem", position: "fixed", top: 0, left: 0 }} />}
-        {!isMobile && <div style={{ ...containerStyles, maxWidth }}>
-          <Heading content={landing.header} />
-        </div>}
-
-        {isMobile && <DynamicNavBar style={{ margin: "2.5rem" }} />}
-        {isMobile && <Heading style={{ margin: "auto 2.5rem", zIndex: 99 }} content={landing.header} />}
+        <Navigation
+          currentStep={this.state.currentStep}
+          totalSteps={this.state.totalSteps}
+          downAction={this.downAction.bind(this)}
+          upAction={this.upAction.bind(this)} />
       </main>
     );
   }

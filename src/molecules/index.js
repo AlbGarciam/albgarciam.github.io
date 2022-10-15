@@ -1,11 +1,4 @@
-import NavBar from "./NavBar";
-import TaglineContainer from "./TaglineContainer";
-import HorizontalCarousel from "./HorizontalCarousel";
-import Footer from "./Footer";
-import ProjectCard from "./ProjectCard";
-import DesktopNavBar from "./DesktopNavBar"
-import MobileNavBar from "./MobileNavBar";
-import TwoToneBackground from "./TwoToneBackground";
-import Heading from "./Heading";
+import BottomNavigationBar from "./BottomNavigationBar";
+import TopNavigationBar from "./TopNavigationBar";
 
-export { NavBar, TaglineContainer, HorizontalCarousel, Footer, ProjectCard, DesktopNavBar, TwoToneBackground, Heading, MobileNavBar };
+export { BottomNavigationBar, TopNavigationBar };
