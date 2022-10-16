@@ -10,5 +10,6 @@ const Fonts = {
 export default {
   h1: Fonts.heading,
   footers: Fonts.black,
-  p: Fonts.regular
+  button: Fonts.black,
+  paragraph: Fonts.regular
 };

@@ -14,14 +14,15 @@ const mainStyles = {
 export default class Navigation extends React.Component {
   render() {
     return (
-      <main style={mainStyles}>
+      <div style={mainStyles}>
         <TopNavigationBar />
+        {this.props.children}
         <BottomNavigationBar
           currentStep={this.props.currentStep}
           totalSteps={this.props.totalSteps}
           downAction={this.props.downAction}
           upAction={this.props.upAction} />
-      </main>
+      </div>
     );
   }
 }

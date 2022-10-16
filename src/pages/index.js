@@ -1,10 +1,11 @@
 import * as React from "react";
-import { Navigation } from "../organisms";
+import { Navigation, Superheading } from "../organisms";
+import Colors from "../theme/Colors";
 
 const mainStyles = {
   position: "absolute",
   top: "0", left: "0", right: "0", bottom: "0",
-  backgroundColor: "#000000",
+  backgroundColor: Colors.background,
   display: "flex",
   flexDirection: "column",
 };
@@ -35,7 +36,9 @@ export default class IndexPage extends React.Component {
           currentStep={this.state.currentStep}
           totalSteps={this.state.totalSteps}
           downAction={this.downAction.bind(this)}
-          upAction={this.upAction.bind(this)} />
+          upAction={this.upAction.bind(this)}>
+            <Superheading variant="inverted" headerText="to the unknown" text="Hello world" route="/about" button="More"/>
+          </Navigation>
       </main>
     );
   }
