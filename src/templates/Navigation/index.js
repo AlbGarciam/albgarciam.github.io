@@ -1,7 +1,7 @@
 import * as React from "react";
 import { BottomNavigationBar, TopNavigationBar } from "../../molecules";
 
-const mainStyles = {
+const style = {
   position: "absolute",
   width: "100%",
   height: "100%",
@@ -14,10 +14,11 @@ const mainStyles = {
 export default class Navigation extends React.Component {
   render() {
     return (
-      <div style={mainStyles}>
-        <TopNavigationBar />
-        {this.props.children}
+      <div style={style}>
+        <TopNavigationBar style={{zIndex: 9999}} />
+        <div style={style}>{this.props.children}</div>
         <BottomNavigationBar
+          style={{zIndex: 9999}}
           currentStep={this.props.currentStep}
           totalSteps={this.props.totalSteps}
           downAction={this.props.downAction}

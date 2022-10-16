@@ -1,6 +1,7 @@
 import * as React from "react";
-import { Navigation, Superheading } from "../organisms";
+import { LandingCarousel, Navigation } from "../templates";
 import Colors from "../theme/Colors";
+import carouselJSON from "../resources/carousels/landing.json"
 
 const mainStyles = {
   position: "absolute",
@@ -11,7 +12,14 @@ const mainStyles = {
 };
 
 export default class IndexPage extends React.Component {
-  state = { currentStep: 1, totalSteps: 3 };
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentStep: 1,
+      totalSteps: carouselJSON.pages.length,
+      shouldScroll: true
+    }
+  }
 
   downAction() {
     let nextCurrentStep = this.state.currentStep + 1
@@ -29,6 +37,19 @@ export default class IndexPage extends React.Component {
     this.setState({ currentStep: nextCurrentStep })
   }
 
+  onWheel(event) {
+    if (!this.state.shouldScroll) { return }
+    this.setState({shouldScroll: false})
+    if (event.deltaY > 0) {
+      this.downAction()
+    } else if (event.deltaY < 0) {
+      this.upAction()
+    }
+    setTimeout(() => {
+      this.setState({shouldScroll: true})
+    }, 1.25*1000);
+  }
+
   render() {
     return (
       <main style={mainStyles}>
@@ -37,8 +58,10 @@ export default class IndexPage extends React.Component {
           totalSteps={this.state.totalSteps}
           downAction={this.downAction.bind(this)}
           upAction={this.upAction.bind(this)}>
-            <Superheading variant="inverted" headerText="to the unknown" text="Hello world" route="/about" button="More"/>
-          </Navigation>
+          <LandingCarousel pages={carouselJSON.pages}
+            currentPosition={this.state.currentStep - 1}
+            onWheel={this.onWheel.bind(this)} />
+        </Navigation>
       </main>
     );
   }
