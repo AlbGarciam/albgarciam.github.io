@@ -15,14 +15,17 @@ export default class Navigation extends React.Component {
   render() {
     return (
       <div style={style}>
-        <TopNavigationBar style={{zIndex: 9999}} />
+        <TopNavigationBar
+          style={{ zIndex: 9999 }}
+          action={this.props.aboutAction} />
         <div style={style}>{this.props.children}</div>
         <BottomNavigationBar
-          style={{zIndex: 9999}}
+          style={{ zIndex: 9999 }}
           currentStep={this.props.currentStep}
           totalSteps={this.props.totalSteps}
           downAction={this.props.downAction}
-          upAction={this.props.upAction} />
+          upAction={this.props.upAction}
+          action={this.props.contactAction} />
       </div>
     );
   }

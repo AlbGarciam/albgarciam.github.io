@@ -14,7 +14,7 @@ export default class BottomNavigationBar extends React.Component {
             <div style={{...this.props.style, ...style}}>
                 <StepProgress style={{flex: 3}} current={this.props.currentStep} total={this.props.totalSteps} />
                 <StepToggle style={{flex: 1}}downAction={this.props.downAction} upAction={this.props.upAction} />
-                <BarNavigationItem style={{flex: 1}} route="/contact" text="Contact" />
+                <BarNavigationItem style={{flex: 1}} action={this.props.action} text="Contact" />
             </div>
         );
     }

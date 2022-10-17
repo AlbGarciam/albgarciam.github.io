@@ -13,7 +13,8 @@ const headerStyle = {
   lineHeight: "4.875rem",
   fontFamily: theme.Fonts.h1,
   color: theme.Colors.primary,
-  flex: 1
+  flex: 1,
+  margin: 0
 }
 
 export default class Superheading extends React.Component {

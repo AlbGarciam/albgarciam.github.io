@@ -1,3 +1,4 @@
 import Superheading from "./Superheading";
+import TwoColumnGrid from "./TwoColumnGrid";
 
-export { Superheading };
+export { Superheading, TwoColumnGrid };

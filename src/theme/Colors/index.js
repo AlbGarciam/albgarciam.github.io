@@ -11,5 +11,6 @@ export default {
   separator: Colors.default,
   primary: Colors.default,
   highlightA: Colors.primary,
-  background: Colors.background
+  background: Colors.background,
+  modalBackground: Colors.primary
 };

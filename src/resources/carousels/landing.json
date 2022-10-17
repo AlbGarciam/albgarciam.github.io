@@ -2,7 +2,7 @@
     "pages": [
         {
             "title": "to the unknown",
-            "description": "Hello!. I’m Alberto García-Muñoz, a pasionate of the mobile development who wants to never stop learning and experimenting.",
+            "description": "Hello! I’m Alberto García-Muñoz, a pasionate of the mobile development who wants to never stop learning and experimenting.",
             "variant": "default",
             "button": "More",
             "route": "/about"

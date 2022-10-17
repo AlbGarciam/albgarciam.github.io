@@ -1,0 +1,25 @@
+{
+    "pages": [
+        {
+            "title": "nalu",
+            "description": "An iOS application that allows you to share your music with your friends by creating a P2P mesh over bluetooth.",
+            "variant": "inverted",
+            "button": "Discover",
+            "route": "https://nalu.gitlab.io"
+        },
+        {
+            "title": "pacer",
+            "description": "Keep your pace in your while running. Pacer will integrate with HealthKit and your Apple Watch to guide you during your sessions.",
+            "variant": "inverted",
+            "button": "More",
+            "route": "https://apps.apple.com/ar/app/pacer-stay-on-pace/id1627313100"
+        },
+        {
+            "title": "wanna see more?",
+            "description": "I try to be active on GitHub where you’ll be able to check how I like to code my applications.",
+            "variant": "default",
+            "button": "Follow",
+            "route": "https://github.com/AlbGarciam"
+        }
+    ]
+}
