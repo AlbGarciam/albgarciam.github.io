@@ -4,7 +4,7 @@ import Theme from "../../theme";
 const style = {
     color: Theme.Colors.primary,
     fontFamily: Theme.Fonts.button,
-    fontSize: "1rem",
+    fontSize: "1.4rem",
     textAlign: "right",
     textDecorationColor: Theme.Colors.highlightA
 }

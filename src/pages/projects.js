@@ -2,7 +2,9 @@ import * as React from "react";
 import { LandingCarousel, Modal, Navigation } from "../templates";
 import Colors from "../theme/Colors";
 import carouselJSON from "../resources/carousels/projects.json"
+import contactJSON from "../resources/modals/contact.json"
 import { ContactModalHeader } from "../molecules";
+import { TwoColumnGrid, ContactList } from "../organisms";
 
 const mainStyles = {
   position: "absolute",
@@ -70,6 +72,7 @@ export default class ProjectsPage extends React.Component {
     return (
       <main style={mainStyles}>
         <Navigation
+          showBottomNavigation
           currentStep={this.state.currentStep}
           totalSteps={this.state.totalSteps}
           downAction={this.downAction.bind(this)}
@@ -81,9 +84,17 @@ export default class ProjectsPage extends React.Component {
             onWheel={this.onWheel.bind(this)} />
         </Navigation>
         <Modal enabled={this.state.contactModal} onClose={this.modalClosed.bind(this)}>
-          <ContactModalHeader />
+          <TwoColumnGrid style={{width: "100%"}}>
+            <ContactModalHeader title={contactJSON.title} descriptions={contactJSON.descriptions}/>
+            <ContactList sections={contactJSON.sections} />
+          </TwoColumnGrid>
         </Modal>
-        <Modal enabled={this.state.aboutModal} onClose={this.modalClosed.bind(this)}/>
+        <Modal enabled={this.state.aboutModal} onClose={this.modalClosed.bind(this)}>
+          <TwoColumnGrid style={{width: "100%"}}>
+            <ContactModalHeader title={contactJSON.title} descriptions={contactJSON.descriptions}/>
+            <ContactList sections={contactJSON.sections} />
+          </TwoColumnGrid>
+        </Modal>
       </main>
     );
   }

@@ -10,7 +10,7 @@ const style = {
 const captionStyle = {
     color: theme.Colors.primary,
     fontFamily: theme.Fonts.paragraph,
-    fontSize: "1rem",
+    fontSize: "1.4rem",
     textAlign: "right"
 }
 

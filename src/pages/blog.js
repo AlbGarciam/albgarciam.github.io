@@ -1,7 +1,7 @@
 import * as React from "react";
 import { LandingCarousel, Modal, Navigation } from "../templates";
 import Colors from "../theme/Colors";
-import carouselJSON from "../resources/carousels/landing.json"
+import carouselJSON from "../resources/carousels/posts.json"
 import contactJSON from "../resources/modals/contact.json"
 import { ContactModalHeader } from "../molecules";
 import { TwoColumnGrid, ContactList } from "../organisms";

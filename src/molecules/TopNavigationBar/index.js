@@ -30,7 +30,7 @@ export default class TopNavigationBar extends React.Component {
                     onClick={this.onClick.bind(this)}
                 />
                 <div style={{flex: 1}} />
-                <BarNavigationItem style={{flex: 1}} action={this.props.action} text="About" />
+                {/* <BarNavigationItem style={{flex: 1}} action={this.props.action} text="About" /> */}
             </div>
         );
     }

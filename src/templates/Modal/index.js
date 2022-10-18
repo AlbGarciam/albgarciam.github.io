@@ -42,9 +42,7 @@ export default class Modal extends React.Component {
             alt="close"
             onClick={this.onCloseClicked.bind(this)}
           />
-          <div>
-            {this.props.children}
-          </div>
+          {this.props.children}
         </div>
       </div>
     );

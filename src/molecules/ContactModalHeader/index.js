@@ -18,10 +18,11 @@ const textStyle = {
 export default class ContactModalHeader extends React.Component {
     render() {
         return (
-            <ModalHeader header="Contact info">
+            <ModalHeader header={this.props.title}>
                 <div style={style}>
-                    <p style={textStyle}>Alberto García-Muñoz</p>
-                    <p style={textStyle}>Spain</p>
+                    {this.props.descriptions.map(item => {
+                        return <p style={textStyle}>{item}</p>
+                    })}
                 </div>
             </ModalHeader>
         );

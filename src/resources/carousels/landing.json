@@ -4,8 +4,8 @@
             "title": "to the unknown",
             "description": "Hello! I’m Alberto García-Muñoz, a pasionate of the mobile development who wants to never stop learning and experimenting.",
             "variant": "default",
-            "button": "More",
-            "route": "/about"
+            "button": "Get resume",
+            "route": "/resources/resume.pdf"
         },
         {
             "title": "some of my work",

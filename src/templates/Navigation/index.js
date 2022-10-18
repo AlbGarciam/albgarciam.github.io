@@ -19,13 +19,15 @@ export default class Navigation extends React.Component {
           style={{ zIndex: 9999 }}
           action={this.props.aboutAction} />
         <div style={style}>{this.props.children}</div>
-        <BottomNavigationBar
-          style={{ zIndex: 9999 }}
-          currentStep={this.props.currentStep}
-          totalSteps={this.props.totalSteps}
-          downAction={this.props.downAction}
-          upAction={this.props.upAction}
-          action={this.props.contactAction} />
+        {
+          (this.props.showBottomNavigation || false) && <BottomNavigationBar
+            style={{ zIndex: 9999 }}
+            currentStep={this.props.currentStep}
+            totalSteps={this.props.totalSteps}
+            downAction={this.props.downAction}
+            upAction={this.props.upAction}
+            action={this.props.contactAction} />
+        }
       </div>
     );
   }

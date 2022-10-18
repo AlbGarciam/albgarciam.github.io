@@ -5,7 +5,8 @@ import theme from "../../theme";
 const style = {
   display: "flex",
   maxWidth: "850px",
-  margin: "auto"
+  margin: "auto",
+  padding: "2rem"
 };
 
 const headerStyle = {

@@ -4,22 +4,29 @@ import Theme from "../../theme";
 const style = {
     display: "flex",
     flexDirection: "column",
-    gap: "1.5rem"
+    gap: "0.5rem"
 }
 
 const headerStyle = {
     color: Theme.Colors.primary,
     fontFamily: Theme.Fonts.h1,
-    fontSize: "4rem",
+    fontSize: "5.625rem",
     margin: "0"
 }
 
-export default class ModalSection extends React.Component {
+const subheaderStyle = {
+    color: Theme.Colors.primary,
+    fontFamily: Theme.Fonts.paragraph,
+    fontSize: "1.45rem",
+    margin: "0"
+}
+
+export default class PageHeader extends React.Component {
     render() {
         return (
-            <div style={{...this.props.style, ...style}}>
+            <div style={{...this.props.style, style}}>
+                <p style={subheaderStyle}>{this.props.subheader}</p>
                 <h1 style={headerStyle}>{this.props.header}</h1>
-                {this.props.children}
             </div>
         );
     }

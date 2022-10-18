@@ -1,5 +1,6 @@
 import React from "react";
 import Colors from "../../theme/Colors";
+import { navigate } from "gatsby";
 
 const style = {
     display: "flex",
@@ -17,7 +18,7 @@ const iconStyle = {
 
 export default class CircleButton extends React.Component {
     iconTapped() {
-        this.props.onClick()
+        navigate(this.props.route)
     }
 
     render() {
