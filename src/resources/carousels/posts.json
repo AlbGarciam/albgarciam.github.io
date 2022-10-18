@@ -1,0 +1,25 @@
+{
+    "pages": [
+        {
+            "title": "Reduce your building time",
+            "description": "If you are a developer, you’ll probably face the situation where your app takes too much time to compile. Discover how to reduce this amount of time.",
+            "variant": "inverted",
+            "button": "Discover",
+            "route": "https://albgarciam.medium.com/reduce-build-times-on-your-ios-app-86a964e0f3bf"
+        },
+        {
+            "title": "Creating ABI stable libraries",
+            "description": "Swift 5 brought us a bunch of new APIs but in fact one of the most important things was the ABI stability.",
+            "variant": "inverted",
+            "button": "Learn more",
+            "route": "https://albgarciam.medium.com/creating-abi-stable-swift-libraries-fe82aaa51250"
+        },
+        {
+            "title": "Is SwiftUI ready for production?",
+            "description": "I faced several times to the question Can we use SwiftUI to build our views?",
+            "variant": "default",
+            "button": "Discover",
+            "route": "https://medium.com/codex/is-swiftui-suitable-for-production-4a92eb55751b"
+        }
+    ]
+}

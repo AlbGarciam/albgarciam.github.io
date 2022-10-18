@@ -1,21 +1,16 @@
 const Colors = {
-  darkA: "#000000",
-  darkB: "#131313",
-  lightA: "#FFFFFF",
-  lightB: "#F8F8F8",
-  grayA: "#EEEEF0",
-  grayB: "#6C6C6C",
-  highlightA: "#ED2536",
+  default: "#FFFFFF",
+  primary: '#016170',
+  secondary: '#009393',
+  tertiary: '#00E0C6',
+  background: '#010101',
+  overlays: '#101010' 
 };
 
 export default {
-  background: Colors.darkA,
-  invertedBackground: Colors.lightA,
-  card: Colors.darkB,
-  cardActive: Colors.grayA,
-  separator: Colors.grayA,
-  primaryText: Colors.lightA,
-  legal: Colors.lightB,
-  invertedPrimaryText: Colors.darkB,
-  accent: Colors.highlightA,
+  separator: Colors.default,
+  primary: Colors.default,
+  highlightA: Colors.primary,
+  background: Colors.background,
+  modalBackground: Colors.primary
 };

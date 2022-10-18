@@ -1,0 +1,25 @@
+{
+    "pages": [
+        {
+            "title": "to the unknown",
+            "description": "Hello! I’m Alberto García-Muñoz, a pasionate of the mobile development who wants to never stop learning and experimenting.",
+            "variant": "default",
+            "button": "Get resume",
+            "route": "/resources/resume.pdf"
+        },
+        {
+            "title": "some of my work",
+            "description": "Multiple projects and multiple approaches but all of them with something in common, passion.",
+            "variant": "full-title",
+            "button": "More",
+            "route": "/projects"
+        },
+        {
+            "title": "tons of stories",
+            "description": "Writing and sharing our knowledge is what makes us evolve as engineers. ",
+            "variant": "inverted",
+            "button": "More",
+            "route": "/blog"
+        }
+    ]
+}

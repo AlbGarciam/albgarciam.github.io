@@ -1,21 +1,15 @@
 import "./style.css";
 
 const Fonts = {
+  heading: "Portfolio-SuperHeading",
+  black: "Portfolio-Black",
   bold: "Portfolio-Bold",
-  medium: "Portfolio-Medium",
   regular: "Portfolio",
-  light: "Portfolio-Light",
 };
 
 export default {
-  h1: Fonts.bold,
-  h2: Fonts.bold,
-  title: Fonts.bold,
-  subtitle: Fonts.medium,
-  pills: Fonts.medium,
-  p: Fonts.regular,
-  navigation: Fonts.light,
-  headingTitle: Fonts.medium,
-  headingPreTitle: Fonts.medium,
-  headingSubtitle: Fonts.regular,
+  h1: Fonts.heading,
+  footers: Fonts.black,
+  button: Fonts.black,
+  paragraph: Fonts.regular
 };

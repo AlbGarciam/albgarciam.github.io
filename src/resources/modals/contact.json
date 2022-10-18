@@ -1,0 +1,35 @@
+{
+    "title": "Contact info",
+    "descriptions": [
+        "Alberto García-Muñoz",
+        "Spain"
+    ],
+    "sections": [
+        {
+            "header": "Social media",
+            "options": [
+                {
+                    "icon": "/resources/linkedin.svg",
+                    "route": "https://www.linkedin.com/in/alberto-garcia-munoz/"
+                },
+                {
+                    "icon": "/resources/github.svg",
+                    "route": "https://github.com/AlbGarciam"
+                },
+                {
+                    "icon": "/resources/medium.svg",
+                    "route": "https://albgarciam.medium.com"
+                }
+            ]
+        },
+        {
+            "header": "Get in touch",
+            "options": [
+                {
+                    "icon": "/resources/mail.svg",
+                    "route": "mailto:alb.garciam@gmail.com"
+                }
+            ]
+        }
+    ]
+}

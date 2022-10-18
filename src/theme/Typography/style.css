@@ -1,28 +1,28 @@
 @font-face {
-    font-family: "Portfolio-Medium";
-    src: url("../../fonts/NeueMontreal-Medium.otf");
+    font-family: "Portfolio-SuperHeading";
+    src: url("../../fonts/LinikSans-ExtraBold.ttf");
+}
+
+@font-face {
+    font-family: "Portfolio-Black";
+    src: url("../../fonts/Satoshi-Black.woff2");
 }
 
 @font-face {
     font-family: "Portfolio";
-    src: url("../../fonts/NeueMontreal-Regular.otf");
+    src: url("../../fonts/Satoshi-Regular.woff2");
 }
 
 @font-face {
     font-family: "Portfolio-Bold";
-    src: url("../../fonts/NeueMontreal-Bold.otf");
-}
-
-@font-face {
-    font-family: "Portfolio-Light";
-    src: url("../../fonts/NeueMontreal-Light.otf");
+    src: url("../../fonts/Satoshi-Bold.woff2");
 }
 
 body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-color: black !important;
+    background-color: #010101 !important;
 }
 
 html {

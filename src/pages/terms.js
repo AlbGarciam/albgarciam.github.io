@@ -1,13 +1,13 @@
 import * as React from "react";
-import { DynamicNavBar } from "../organisms";
-import { NavBar, Footer, Heading } from "../molecules";
-import { SectionTitle } from "../atoms";
 import Theme from "../theme";
-import terms from "../json/terms";
+import { Navigation } from "../templates";
+import terms from "../resources/terms.json"
+import { PageHeader } from "../atoms";
 
 const mainStyles = {
-  minHeight: "100vh",
-  backgroundColor: "#000000",
+  position: "absolute",
+  top: "0", left: "0", right: "0", bottom: "0",
+  backgroundColor: Theme.Colors.background,
   display: "flex",
   flexDirection: "column",
 };
@@ -15,49 +15,35 @@ const mainStyles = {
 const containerStyle = {
   display: "flex",
   flexDirection: "column",
-  margin: "0 " + Theme.Sizes.Spacings.m,
-  maxWidth: Theme.Sizes.Dimensions.maxWidth,
+  maxWidth: "850px",
+  margin: "auto",
+  marginTop: "44px",
+  padding: "0 2rem"
 };
 
 const paragraphStyle = {
-  fontFamily: Theme.Fonts.p,
-  fontSize: Theme.Sizes.Typographies.p,
-  color: Theme.Colors.legal,
+  fontFamily: Theme.Fonts.paragraph,
+  fontSize: "1rem",
+  color: Theme.Colors.primary,
 };
 
-export default class TermsPage extends React.Component {
-  state = { width: 0 };
-
-  componentDidMount() {
-    const { innerWidth: width } = window;
-    this.setState({ width });
-    window.addEventListener("resize", this.handleResize.bind(this));
-  }
-
-  handleResize() {
-    const { innerWidth: width } = window;
-    this.setState({ width });
-  }
-
+export default class ProjectsPage extends React.Component {
   render() {
-    const isMobile = this.state.width < 768
-    const margin = isMobile ? "2.5rem" : "2.5rem 2.5rem 2.5rem 12rem"
     return (
       <main style={mainStyles}>
-        {!isMobile && <DynamicNavBar style={{ padding: "2.5vh 2.5rem", position: "fixed", top: 0, left: 0 }} />}
-        {isMobile && <DynamicNavBar style={{ margin: "2.5rem" }} />}
-
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", margin }}>
-          <div style={containerStyle}>
-            <SectionTitle title="Terms & Conditions" subtitle={terms.header} />
-            <div>
-              <p>{terms.header}</p>
-              {terms.paragraphs.map((element) => {
-                return <p style={paragraphStyle}>{element}</p>;
-              })}
+        <Navigation>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+            <div style={containerStyle}>
+              <PageHeader header="Terms & conditions" subheader="" />
+              <div>
+                <p>{terms.header}</p>
+                {terms.paragraphs.map((element) => {
+                  return <p style={paragraphStyle}>{element}</p>;
+                })}
+              </div>
             </div>
           </div>
-        </div>
+        </Navigation>
       </main>
     );
   }

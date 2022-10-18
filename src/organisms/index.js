@@ -1,5 +1,5 @@
-import LandingSections from "./LandingSections";
-import DynamicNavBar from "./DynamicNavBar";
-import ProjectSection from "./ProjectSection";
+import ContactList from "./ContactList";
+import Superheading from "./Superheading";
+import TwoColumnGrid from "./TwoColumnGrid";
 
-export { LandingSections, DynamicNavBar, ProjectSection };
+export { ContactList, Superheading, TwoColumnGrid };
