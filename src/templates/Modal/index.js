@@ -21,10 +21,11 @@ const iconStyle = {
 }
 
 const containerStyle = {
-  margin: "2rem 2.625rem",
+  margin: "2rem 2.625rem 0 2.625rem",
   display: "flex",
   flexDirection: "column",
-  alignItems: "flex-end"
+  alignItems: "flex-end",
+  overflowY: "overlay"
 }
 
 export default class Modal extends React.Component {

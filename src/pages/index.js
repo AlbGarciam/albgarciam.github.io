@@ -86,13 +86,13 @@ export default class ProjectsPage extends React.Component {
         <Modal enabled={this.state.contactModal} onClose={this.modalClosed.bind(this)}>
           <TwoColumnGrid style={{width: "100%"}}>
             <ContactModalHeader title={contactJSON.title} descriptions={contactJSON.descriptions}/>
-            <ContactList sections={contactJSON.sections} />
+            <ContactList style={{paddingBottom: "2rem"}} sections={contactJSON.sections} />
           </TwoColumnGrid>
         </Modal>
         <Modal enabled={this.state.aboutModal} onClose={this.modalClosed.bind(this)}>
           <TwoColumnGrid style={{width: "100%"}}>
             <ContactModalHeader title={contactJSON.title} descriptions={contactJSON.descriptions}/>
-            <ContactList sections={contactJSON.sections} />
+            <ContactList style={{paddingBottom: "2rem"}} sections={contactJSON.sections} />
           </TwoColumnGrid>
         </Modal>
       </main>

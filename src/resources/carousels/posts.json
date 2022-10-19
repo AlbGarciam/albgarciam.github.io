@@ -15,8 +15,8 @@
             "route": "https://albgarciam.medium.com/creating-abi-stable-swift-libraries-fe82aaa51250"
         },
         {
-            "title": "Is SwiftUI ready for production?",
-            "description": "I faced several times to the question Can we use SwiftUI to build our views?",
+            "title": "SwiftUI, ready for prod?",
+            "description": "I faced several times to the question: Can we use SwiftUI to build our views?",
             "variant": "default",
             "button": "Discover",
             "route": "https://medium.com/codex/is-swiftui-suitable-for-production-4a92eb55751b"
