@@ -1,5 +1,5 @@
 const Typographies = {
-  superheadings: "8rem",
+  superheadings: "6rem",
   h1: "8rem",
   h2: "4.125rem",
   title: "1.5rem",
@@ -14,7 +14,7 @@ const Spacings = {
 
 const Dimensions = {
   xxxs: "1px",
-  maxWidth: "1500px",
+  maxWidth: "min(100% - 2rem, 1920px)",
   full: "100%",
   radius: "1.5rem",
 };

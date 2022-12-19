@@ -4,15 +4,26 @@ import { navigate } from "gatsby";
 import logo from "./logo.svg";
 
 const style = {
+    position: "absolute",
+    width: "100%",
     display: "flex",
     flexDirection: "row",
-    padding: "0 2.625rem",
-    alignItems: "center"
+    paddingTop: "1.5rem",
+    justifyContent: "center"
+}
+
+const containerStyle = {
+    width: "100%",
+    maxWidth: "min(100% - 2rem, 1920px)",
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    gap: "2rem"
 }
 
 const iconStyle = {
     width: "auto",
-    height: "2rem",
+    height: "2.625rem",
 }
 
 export default class TopNavigationBar extends React.Component {
@@ -23,14 +34,18 @@ export default class TopNavigationBar extends React.Component {
     render() {
         return (
             <div style={{...this.props.style, ...style}}>
-                <img 
-                    style={{...iconStyle}}
-                    src={logo}
-                    alt="logo"
-                    onClick={this.onClick.bind(this)}
-                />
-                <div style={{flex: 1}} />
-                {/* <BarNavigationItem style={{flex: 1}} action={this.props.action} text="About" /> */}
+                <div style={containerStyle}>
+                    <img 
+                        style={{...iconStyle}}
+                        src={logo}
+                        alt="logo"
+                        onClick={this.onClick.bind(this)}
+                    />
+                    <div style={{flex: 1}} />
+                    <BarNavigationItem style={{flex: 1}} action={this.props.action} text="BLOG" />
+                    <BarNavigationItem style={{flex: 1}} action={this.props.action} text="PROJECTS" />
+                    <BarNavigationItem style={{flex: 1}} action={this.props.action} text="LET'S TALK" />
+                </div>
             </div>
         );
     }

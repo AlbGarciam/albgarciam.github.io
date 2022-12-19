@@ -8,6 +8,14 @@ const Fonts = {
 };
 
 export default {
+  Family: {
+    heading: "Portfolio",
+    navigation: "Portfolio-Regular"
+  },
+  Weight: {
+    h1: 700,
+    navigationLink: 400
+  },
   h1: Fonts.heading,
   footers: Fonts.black,
   button: Fonts.black,

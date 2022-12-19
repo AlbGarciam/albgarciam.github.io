@@ -3,8 +3,9 @@ import Theme from "../../theme";
 import { navigate } from "gatsby";
 
 const style = {
-    color: Theme.Colors.primary,
-    fontFamily: Theme.Fonts.footers,
+    color: Theme.Colors.textDark,
+    fontFamily: Theme.Fonts.Family.navigation,
+    fontWeight: Theme.Fonts.Weight.navigationLink,
     fontSize: "1rem",
     textAlign: "right",
     textDecoration: "none"
