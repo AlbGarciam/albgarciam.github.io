@@ -1,4 +1,5 @@
 import * as React from "react";
+import PortfolioButton from "../../atoms/PortfolioButton";
 import Theme from "../../theme";
 
 const style = {
@@ -22,6 +23,13 @@ const containerStyle = {
   padding: "5.5rem 2rem",
 };
 
+const buttonContainerStyle = {
+  display: "flex",
+  gap: "2rem",
+  justifyContent: "center",
+  paddingTop: "5.125rem"
+}
+
 export default class ContactBadge extends React.Component {
   render() {
     return (
@@ -32,6 +40,10 @@ export default class ContactBadge extends React.Component {
               return <h2 style={headingStyle}>{text}</h2>
             })
           }
+          <div style={buttonContainerStyle}>
+            <PortfolioButton text="GET RESUME" route="/resources/resume.pdf"/>
+            <PortfolioButton variant="secondary" text="LET'S TALK" route="mailto:alb.garciam@gmail.com"/>
+          </div>
         </div>
       </div>
     );

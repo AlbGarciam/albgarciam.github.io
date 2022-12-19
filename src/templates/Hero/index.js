@@ -15,6 +15,7 @@ const headingStyle = {
   fontWeight: Theme.Fonts.Weight.h1,
   fontSize: Theme.Sizes.Typographies.superheadings,
   margin: "0 1rem",
+  lineHeight: "5.5rem"
 };
 
 const containerStyle = {
