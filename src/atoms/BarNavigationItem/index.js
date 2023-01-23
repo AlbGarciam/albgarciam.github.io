@@ -10,18 +10,13 @@ const style = {
 }
 
 export default class BarNavigationItem extends React.Component {
-    onClick() {
-        this.props.action()
-    }
-
     render() {
         return (
             <div style={{display: "flex", alignItems: "center"}}>
                 <a style={{ ...this.props.style, ...style, ...{
                     color: (this.props.fluor != null) ? Theme.Colors.textHighlight : Theme.Colors.textDark
                 }}}
-                    href="#"
-                    onClick={this.onClick.bind(this)}>
+                    href={this.props.action}>
                     {this.props.text}
                 </a>
             </div>

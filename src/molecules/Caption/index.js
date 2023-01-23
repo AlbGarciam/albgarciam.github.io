@@ -20,7 +20,7 @@ const subtitleStyle = {
     color: Theme.Colors.textLight,
     fontFamily: Theme.Fonts.Family.heading,
     fontWeight: Theme.Fonts.Weight.regular,
-    fontSize: "1.2rem",
+    fontSize: "1.25rem",
     textAlign: "left",
     margin: "0",
     maxWidth: "700px"

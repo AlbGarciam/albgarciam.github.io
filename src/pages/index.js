@@ -1,5 +1,5 @@
 import * as React from "react";
-import { BottomNavigationBar, Caption, TopNavigationBar } from "../molecules";
+import { BottomNavigationBar, Caption, Link, TopNavigationBar } from "../molecules";
 import { ContactBadge } from "../organisms";
 import { Hero } from "../templates";
 import Theme from "../theme"
@@ -19,7 +19,7 @@ const sectionStyle = {
   gap: "9rem"
 }
 
-export default class ProjectsPage extends React.Component {
+export default class LandingPage extends React.Component {
   render() {
     return (
       <main style={mainStyles}>
@@ -27,6 +27,12 @@ export default class ProjectsPage extends React.Component {
         <Hero title={`BRING<br/>YOUR IDEAS<br/>TO LIFE`}/>
         <div style={sectionStyle}>
           <Caption title="WHAT ABOUT ME" text="Everyone of us loves something different. In my case front-end development is one of these things. From iOS apps to websites or even middlewares, all of them are developed with love and devotion."/>
+          <div>
+            <Link text="PROJECTS" route="/projects" />
+            <Link text="POSTS" route="/blog" />
+            <Link text="CONTACT" route="/contact" />
+          </div>
+          <img src="/resources/tagline.svg"/>
           <ContactBadge title={`WANT TO<br/>KNOW MORE?`}/>
           <BottomNavigationBar />
         </div>

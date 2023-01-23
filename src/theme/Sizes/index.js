@@ -1,5 +1,5 @@
 const Typographies = {
-  superheadings: "6rem",
+  superheadings: "4.5rem",
   h1: "8rem",
   h2: "4.125rem",
   title: "1.5rem",

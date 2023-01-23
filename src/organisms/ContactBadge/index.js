@@ -4,7 +4,7 @@ import Theme from "../../theme";
 
 const style = {
   backgroundColor: Theme.Colors.backgroundPrimary,
-  maxWidth: Theme.Sizes.Dimensions.maxWidth,
+  maxWidth: "min(100%, 1920px)",
   display: "grid",
   justifyContent: "center",
   alignItems: "center",

@@ -41,9 +41,9 @@ export default class BottomNavigationBar extends React.Component {
                         onClick={this.onClick.bind(this)}
                     />
                 <div style={containerStyle}>
-                    <BarNavigationItem style={{flex: 1}} fluor action={this.props.action} text="TERMS & CONDITIONS" />
-                    <BarNavigationItem style={{flex: 1}} fluor action={this.props.action} text="© ALL RIGHTS RESERVED" />
-                    <BarNavigationItem style={{flex: 1}} fluor action={this.props.action} text="PRIVACY POLICY" />
+                    <BarNavigationItem style={{flex: 1}} fluor action={"/terms"} text="TERMS & CONDITIONS" />
+                    <BarNavigationItem style={{flex: 1}} fluor action={"/"} text="© ALL RIGHTS RESERVED" />
+                    <BarNavigationItem style={{flex: 1}} fluor action={"/terms"} text="PRIVACY POLICY" />
                 </div>
             </div>
         );

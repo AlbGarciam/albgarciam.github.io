@@ -1,40 +1,49 @@
 import * as React from "react";
-import Theme from "../theme";
-import { Navigation } from "../templates";
+import { BottomNavigationBar, Caption, Link, TopNavigationBar } from "../molecules";
+import { ContactBadge } from "../organisms";
+import { Hero } from "../templates";
+import Theme from "../theme"
 import terms from "../resources/terms.json"
-import { PageHeader } from "../atoms";
 
 const mainStyles = {
-  position: "absolute",
-  top: "0", left: "0", right: "0", bottom: "0",
-  backgroundColor: Theme.Colors.background,
+  backgroundColor: Theme.Colors.backgroundSecondary,
+  width: "100%",
+  height: "100%"
+};
+
+const sectionStyle = {
   display: "flex",
   flexDirection: "column",
-};
+  maxWidth: Theme.Sizes.Dimensions.maxWidth,
+  margin: "9rem max(3rem, 10%)",
+  marginBottom: "2rem",
+  gap: "9rem"
+}
 
 const containerStyle = {
   display: "flex",
   flexDirection: "column",
   maxWidth: "850px",
   margin: "auto",
-  marginTop: "44px",
+  marginTop: "12px",
   padding: "0 2rem"
 };
 
 const paragraphStyle = {
   fontFamily: Theme.Fonts.paragraph,
-  fontSize: "1rem",
+  fontSize: "1.2rem",
   color: Theme.Colors.primary,
 };
 
-export default class ProjectsPage extends React.Component {
+export default class TermsPage extends React.Component {
   render() {
     return (
       <main style={mainStyles}>
-        <Navigation>
+        <TopNavigationBar />
+        <Hero title={`TERMS<br/>AND<br/>CONDS`} />
+        <div style={sectionStyle}>
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
             <div style={containerStyle}>
-              <PageHeader header="Terms & conditions" subheader="" />
               <div>
                 <p>{terms.header}</p>
                 {terms.paragraphs.map((element) => {
@@ -43,7 +52,9 @@ export default class ProjectsPage extends React.Component {
               </div>
             </div>
           </div>
-        </Navigation>
+          <ContactBadge title={`WANT TO<br/>KNOW MORE?`} />
+          <BottomNavigationBar />
+        </div>
       </main>
     );
   }
