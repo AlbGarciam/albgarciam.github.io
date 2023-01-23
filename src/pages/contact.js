@@ -24,16 +24,17 @@ export default class ProjectsPage extends React.Component {
     return (
       <main style={mainStyles}>
         <TopNavigationBar />
-        <Hero title={`BRING(ING)<br/>YOUR IDEAS<br/>TO LIFE`}/>
+        <Hero title={`BRING(ING)<br/>MINDS<br/>TOGHETHER`}/>
         <div style={sectionStyle}>
-          <Caption title="SO CLEAN, SO GOOD" text="CLEAN architecture is the base of all the projects. Allowing us to develop segregated layers to structure our applications is the key for success. "/>
+          <Caption title="iOS runs through my veins" text="If you're looking for an iOS passionate you're in the correct place!. I've been coding on for different iOS platforms since 2017 and I still love it."/>
           <div>
-            <Link text="PACER" route="https://apps.apple.com/ar/app/pacer-stay-on-pace/id1627313100" />
-            <Link text="NALU" route="https://nalu.gitlab.io" />
-            <Link text="DEPENDENCY INJECTION" route="https://github.com/AlbGarciam/DependencyInjection" />
+            <Link text="LINKEDIN" route="https://www.linkedin.com/in/alberto-garcia-munoz/" />
             <Link text="GITHUB" route="https://github.com/AlbGarciam/" />
+            <Link text="MEDIUM" route="https://medium.com/@albgarciam" />
+            <Link text="DRIBBBLE" route="https://dribbble.com/AlbGarciam" />
           </div>
-          <img src="/resources/products-tagline.svg"/>
+          <Caption title="Not enough?" text="Complex projects means complex environments and without Python, Bash or GO you're going to be blocked."/>
+          <img src="/resources/tagline.svg"/>
           <ContactBadge title={`WANT TO<br/>KNOW MORE?`}/>
           <BottomNavigationBar />
         </div>

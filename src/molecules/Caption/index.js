@@ -1,25 +1,37 @@
 import React from "react";
-import { PortfolioButton } from "../../atoms";
-import theme from "../../theme";
+import Theme from "../../theme";
 
 const style = {
     display: "flex",
     flexDirection: "column",
 }
 
-const captionStyle = {
-    color: theme.Colors.primary,
-    fontFamily: theme.Fonts.paragraph,
-    fontSize: "1.4rem",
-    textAlign: "right"
+const titleStyle = {
+    color: Theme.Colors.textLight,
+    fontFamily: Theme.Fonts.Family.heading,
+    fontWeight: Theme.Fonts.Weight.h1,
+    fontSize: "4rem",
+    textAlign: "left",
+    margin: "0",
+    maxWidth: "700px"
+}
+
+const subtitleStyle = {
+    color: Theme.Colors.textLight,
+    fontFamily: Theme.Fonts.Family.heading,
+    fontWeight: Theme.Fonts.Weight.regular,
+    fontSize: "1.25rem",
+    textAlign: "left",
+    margin: "0",
+    maxWidth: "700px"
 }
 
 export default class Caption extends React.Component {
     render() {
         return (
             <div style={{ ...this.props.style, ...style }}>
-                <p style={captionStyle}>{this.props.text}</p>
-                <PortfolioButton route={this.props.route} text={this.props.button} />
+                <h2 style={titleStyle}>{this.props.title}</h2>
+                <p style={subtitleStyle}>{this.props.text}</p>
             </div>
         );
     }

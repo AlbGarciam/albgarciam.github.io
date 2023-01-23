@@ -1,26 +1,22 @@
 import React from "react";
 import Theme from "../../theme";
-import { navigate } from "gatsby";
 
 const style = {
-    color: Theme.Colors.primary,
-    fontFamily: Theme.Fonts.footers,
+    fontFamily: Theme.Fonts.Family.navigation,
+    fontWeight: Theme.Fonts.Weight.navigationLink,
     fontSize: "1rem",
     textAlign: "right",
     textDecoration: "none"
 }
 
 export default class BarNavigationItem extends React.Component {
-    onClick() {
-        this.props.action()
-    }
-
     render() {
         return (
             <div style={{display: "flex", alignItems: "center"}}>
-                <a style={{ ...this.props.style, ...style }}
-                    href="#"
-                    onClick={this.onClick.bind(this)}>
+                <a style={{ ...this.props.style, ...style, ...{
+                    color: (this.props.fluor != null) ? Theme.Colors.textHighlight : Theme.Colors.textDark
+                }}}
+                    href={this.props.action}>
                     {this.props.text}
                 </a>
             </div>
