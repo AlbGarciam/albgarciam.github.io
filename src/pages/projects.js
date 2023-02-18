@@ -28,6 +28,7 @@ export default class ProjectsPage extends React.Component {
         <div style={sectionStyle}>
           <Caption title="SO CLEAN, SO GOOD" text="CLEAN architecture is the base of all the projects. Allowing us to develop segregated layers to structure our applications is the key for success. "/>
           <div>
+            <Link text="LOST" route="https://apps.apple.com/us/app/lost-aceptas-el-reto/id1666019387" />
             <Link text="PACER" route="https://apps.apple.com/ar/app/pacer-stay-on-pace/id1627313100" />
             <Link text="NALU" route="https://nalu.gitlab.io" />
             <Link text="DEPENDENCY INJECTION" route="https://github.com/AlbGarciam/DependencyInjection" />
