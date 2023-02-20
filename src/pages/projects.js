@@ -3,6 +3,7 @@ import { BottomNavigationBar, Caption, Link, TopNavigationBar } from "../molecul
 import { ContactBadge } from "../organisms";
 import { Hero } from "../templates";
 import Theme from "../theme"
+import { Helmet } from 'react-helmet';
 
 const mainStyles = {
   backgroundColor: Theme.Colors.backgroundSecondary,
@@ -23,6 +24,9 @@ export default class ProjectsPage extends React.Component {
   render() {
     return (
       <main style={mainStyles}>
+        <Helmet>
+          <title>Projects | AlbGarciam</title>
+        </Helmet>
         <TopNavigationBar />
         <Hero title={`BRING(ING)<br/>YOUR IDEAS<br/>TO LIFE`}/>
         <div style={sectionStyle}>

@@ -4,6 +4,7 @@ import { ContactBadge } from "../organisms";
 import { Hero } from "../templates";
 import Theme from "../theme"
 import terms from "../resources/terms.json"
+import { Helmet } from 'react-helmet';
 
 const mainStyles = {
   backgroundColor: Theme.Colors.backgroundSecondary,
@@ -39,6 +40,9 @@ export default class TermsPage extends React.Component {
   render() {
     return (
       <main style={mainStyles}>
+        <Helmet>
+          <title>Terms and conditions | AlbGarciam</title>
+        </Helmet>
         <TopNavigationBar />
         <Hero title={`TERMS<br/>AND<br/>CONDS`} />
         <div style={sectionStyle}>
