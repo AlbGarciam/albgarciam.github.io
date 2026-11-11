@@ -4,7 +4,7 @@
 export const person = {
   name: 'Alberto García-Muñoz',
   role: 'Mobile Architecture Lead & Engineering Manager',
-  tagline: 'I set the technical direction of a multi-bank mobile platform live in 16 countries.',
+  tagline: 'I set the technical direction for mobile platforms serving multiple markets.',
   location: 'Madrid, Spain',
 };
 
@@ -20,39 +20,39 @@ export const chapters = [
 export const manifesto = {
   statement:
     "I'd rather understand *where a problem *comes *from than ship the fastest patch for it.",
-  body: 'Mobile architecture and engineering leader with 10+ years in tech, 5+ of them in architecture roles. At Open Digital Services (Openbank, Santander Group) I manage a team of five and set the technical direction for the engineers who build one mobile platform for many banks.',
+  body: 'Mobile architecture and engineering leader with 10+ years in tech, 5+ of them in architecture roles. I manage a team of architects and engineers and set the technical direction for large-scale mobile products.',
   facts: [
-    { value: '16', label: 'Countries running the multi-bank platform I architect' },
-    { value: '~120', label: 'Engineers building on its architecture, standards and guidelines' },
-    { value: '99.97%', label: 'Crash-free rate, with a production release every week' },
-    { value: '~10 min', label: 'Mobile CI/CD build time' },
+    { value: 'Multi-market', label: 'Mobile products built on scalable architecture' },
+    { value: 'Cross-functional', label: 'Teams supported through shared standards and guidance' },
+    { value: 'Reliable', label: 'Production releases delivered on a regular cadence' },
+    { value: 'Automated', label: 'Mobile build and delivery pipelines' },
   ],
 };
 
 export const expertise = [
   {
     title: 'Architecture at scale',
-    body: 'I own the target architecture of a multi-bank mobile platform delivered in 16 countries: reusable frameworks, clear dependency boundaries and API-first integration, with iOS and Android kept aligned.',
+    body: 'I shape the target architecture for large-scale mobile products: reusable frameworks, clear dependency boundaries and API-first integration, with iOS and Android kept aligned.',
     tags: ['Target architecture', 'Modularisation', 'API-first', 'iOS + Android'],
   },
   {
     title: 'Leading people & delivery',
-    body: 'I line-manage five architects and engineers and own the 3, 6 and 12-month mobile roadmap. As Software Director I led a 20-person Spain–Chile team that took Santander Chile from zero to three major features in under six months.',
+    body: 'I lead architects and engineers and own the short- and long-term mobile roadmap. As Software Director, I led a distributed team delivering platform capabilities and cloud infrastructure from inception to production.',
     tags: ['Engineering management', 'Roadmap', 'Mentoring', 'Cross-functional'],
   },
   {
     title: 'Release engineering',
-    body: 'Weekly production releases at a 99.97% crash-free rate, on a CI/CD pipeline I own end to end — build, test, code signing and distribution — kept at around ten minutes.',
+    body: 'I own the CI/CD pipeline end to end — build, test, code signing and distribution — supporting reliable, frequent production releases.',
     tags: ['CI/CD', 'Code signing', 'Observability', 'Automated testing'],
   },
   {
     title: 'AI agents & cloud',
-    body: 'Built AI agents on AWS AgentCore that support the software lifecycle across the Santander Group and cut critical security issues by 80% worldwide, plus the MCP layer that exposes internal systems to them in an auditable way.',
-    tags: ['AWS AgentCore', 'MCP', 'Docker', 'AWS Certified'],
+    body: 'Developed AI-assisted tools to support the software lifecycle, with an auditable integration layer for enterprise systems.',
+    tags: ['AI-assisted engineering', 'Enterprise integration', 'Docker', 'AWS Certified'],
   },
   {
     title: 'Security in regulated banking',
-    body: 'Defined the standard OAuth integration so iOS and Android share the same flow, contracts and security behaviour for every bank, and manage governance, risk and non-functional requirements with cybersecurity and infrastructure.',
+    body: 'Defined secure integration patterns across mobile platforms and manage governance, risk and non-functional requirements with cybersecurity and infrastructure teams.',
     tags: ['OAuth', 'Governance', 'Compliance', 'Risk'],
   },
   {
@@ -66,20 +66,20 @@ export const journey = [
   {
     period: '2021 — Now',
     company: 'Open Digital Services',
-    role: 'Lead Mobile Architect · Openbank, Santander Group',
-    body: 'Target architecture and roadmap of a multi-bank platform in 16 countries. Leading the team since 2023: five direct reports, technical direction for ~120 engineers.',
+    role: 'Lead Mobile Architect · Multi-market mobile products',
+    body: 'Target architecture and roadmap for large-scale mobile products. Leading a team since 2023 and setting technical direction across engineering groups.',
   },
   {
     period: '2025 — 2026',
     company: 'Open Digital Services',
     role: 'AI Engineer · alongside the architecture role',
-    body: 'AI agents on AWS AgentCore for the software lifecycle across the Santander Group, and the MCP tooling layer behind them. Critical security issues down 80% worldwide.',
+    body: 'Developed AI-assisted tools to support the software lifecycle, alongside an auditable integration layer for enterprise systems.',
   },
   {
     period: '2024 — 2025',
-    company: 'Santander Chile',
+    company: 'Open Digital Services',
     role: 'Software Director · alongside the architecture role',
-    body: 'Led 20 people between Spain and Chile to deliver and install the platform and its cloud infrastructure: from zero to three major features live in under six months.',
+    body: 'Led a distributed team delivering platform capabilities and cloud infrastructure, taking the work from inception to production on an accelerated timeline.',
   },
   {
     period: '2024 — Now',
@@ -89,9 +89,9 @@ export const journey = [
   },
   {
     period: '2019 — 2021',
-    company: 'Openbank',
+    company: 'Digital banking company',
     role: 'Senior iOS Developer',
-    body: 'Led development of onboarding and common modules for the multi-bank application.',
+    body: 'Led development of onboarding and shared modules for a digital banking application.',
   },
   {
     period: '2018 — 2019',
@@ -109,7 +109,7 @@ export const journey = [
     period: '2016 — 2017',
     company: 'NexStreaming · Management Solutions',
     role: 'R&D Mobile Developer / Programmer Analyst',
-    body: 'Android and Android TV video player and 360° navigation with adaptive streaming and DRM; bond valuation model validation in Python, SAS and Java for BBVA Spain.',
+    body: 'Android and Android TV video player and 360° navigation with adaptive streaming and DRM; bond valuation model validation in Python, SAS and Java for a Spanish bank.',
   },
 ];
 

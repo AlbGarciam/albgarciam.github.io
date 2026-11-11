@@ -240,7 +240,7 @@ button {
   display: grid;
   align-content: center;
   padding: 5rem var(--gutter) 2rem;
-  background: var(--lilac);
+  background: var(--flare);
   color: var(--ink);
   overflow-y: auto;
 }

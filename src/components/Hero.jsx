@@ -37,7 +37,7 @@ export function Hero() {
     <section className="hero" id="top" ref={ref}>
       <div className="hero__sticky">
         <motion.div className="hero__meta" style={{ opacity: fade }}>
-          <span>Portfolio 2026 / 27</span>
+          <span> </span>
           <span>{person.location}</span>
         </motion.div>
 
