@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useSyncExternalStore } from 'react';
 import { AnimatePresence, motion, useMotionValue, useScroll, useSpring } from 'motion/react';
+import { analyticsConfigured, getConsent, initAnalytics, onConsentChange, setConsent } from '../analytics.js';
 import { chapters, person, socials } from '../content.js';
 import { lockScroll, scrollToId } from '../scroll.js';
 import { EASE } from './Text.jsx';
@@ -105,8 +106,38 @@ export function Cursor() {
   );
 }
 
-export function Footer() {
+/** Asks once; the footer link re-opens it so the choice can be changed any time. */
+function ConsentBanner({ forceOpen, onClose }) {
+  const consent = useSyncExternalStore(onConsentChange, getConsent, () => null);
+  if (!analyticsConfigured || (consent && !forceOpen)) return null;
+  const choose = (granted) => {
+    setConsent(granted);
+    onClose();
+  };
   return (
+    <aside className="consent" role="dialog" aria-label="Analytics">
+      <p>
+        May I count visits and see how the site gets used? It uses Firebase Analytics (Google), which sets
+        cookies. Nothing is loaded or stored unless you accept.
+      </p>
+      <div className="consent__actions">
+        <button className="pill" onClick={() => choose(true)}>
+          Accept
+        </button>
+        <button className="pill" onClick={() => choose(false)}>
+          Decline
+        </button>
+      </div>
+    </aside>
+  );
+}
+
+export function Footer() {
+  const [reopen, setReopen] = useState(false);
+  useEffect(() => initAnalytics(), []);
+  return (
+    <>
+    <ConsentBanner forceOpen={reopen} onClose={() => setReopen(false)} />
     <footer className="footer">
       <p className="footer__name">{person.name}</p>
       <ul>
@@ -123,10 +154,24 @@ export function Footer() {
           </a>
         </li>
       </ul>
-      <p className="footer__note">Built with React. No cookies, no trackers, nothing loaded from elsewhere.</p>
+      <p className="footer__note">
+        Built with React. Fonts and code are served from this site.{' '}
+        {analyticsConfigured
+          ? 'Analytics only runs if you accept it.'
+          : 'No cookies, no trackers.'}
+        {analyticsConfigured && (
+          <>
+            {' '}
+            <button className="link" onClick={() => setReopen(true)}>
+              Analytics settings
+            </button>
+          </>
+        )}
+      </p>
       <button className="link footer__top" onClick={() => scrollToId('top')}>
         Back to top ↑
       </button>
     </footer>
+    </>
   );
 }

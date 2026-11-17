@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { solveChallenge } from 'altcha-lib';
 import { deriveKey } from 'altcha-lib/algorithms/web/pbkdf2';
+import { track } from '../analytics.js';
 import { contactTopics, socials } from '../content.js';
 import { ChapterHead, FadeUp, Reveal } from './Text.jsx';
 
@@ -77,10 +78,12 @@ export function Contact() {
       }
       form.reset();
       setStatus('sent');
+      track('contact_submit', { result: 'sent' });
       setNote('Message sent. I’ll get back to you soon.');
     } catch (error) {
       const key = error instanceof TypeError ? 'network' : error.message;
       setStatus('error');
+      track('contact_submit', { result: key });
       setNote(MESSAGES[key] ?? MESSAGES.default);
     }
   };
