@@ -29,8 +29,8 @@ jobs:
         working-directory: functions
       - name: Build
         env:
-          # Repository variable holding the URL of the deployed Firebase function.
-          VITE_CONTACT_ENDPOINT: ${{ vars.CONTACT_ENDPOINT }}
+          # Public endpoint URL; a repository variable can override it.
+          VITE_CONTACT_ENDPOINT: ${{ vars.CONTACT_ENDPOINT || 'https://contact-yehybqmtiq-ew.a.run.app' }}
         run: npm run build
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
