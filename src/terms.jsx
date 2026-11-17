@@ -5,6 +5,8 @@ import '@fontsource-variable/bricolage-grotesque/standard.css';
 import '@fontsource-variable/jetbrains-mono/index.css';
 import '@fontsource/instrument-serif/400-italic.css';
 import './styles.css';
+import { Footer } from './components/Chrome.jsx';
+import { Contact } from './components/Contact.jsx';
 import { EASE, Reveal } from './components/Text.jsx';
 import terms from './resources/terms.json';
 
@@ -36,6 +38,8 @@ function Terms() {
           {terms.paragraphs.map((text, i) => (isHeading(text) ? <h2 key={i}>{text}</h2> : <p key={i}>{text}</p>))}
         </motion.div>
       </main>
+      <Contact />
+      <Footer />
     </MotionConfig>
   );
 }

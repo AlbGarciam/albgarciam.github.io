@@ -5,6 +5,8 @@ import '@fontsource-variable/bricolage-grotesque/standard.css';
 import '@fontsource-variable/jetbrains-mono/index.css';
 import '@fontsource/instrument-serif/400-italic.css';
 import './styles.css';
+import { Footer } from './components/Chrome.jsx';
+import { Contact } from './components/Contact.jsx';
 import { FadeUp, Reveal } from './components/Text.jsx';
 import { education, journey, person } from './content.js';
 
@@ -53,6 +55,8 @@ function About() {
           ))}
         </ol>
       </main>
+      <Contact />
+      <Footer />
     </MotionConfig>
   );
 }
