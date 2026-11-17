@@ -1171,6 +1171,35 @@ button {
   color: var(--muted);
 }
 
+/* ---------- Analytics consent ---------- */
+.consent {
+  position: fixed;
+  z-index: 60;
+  left: var(--gutter);
+  right: var(--gutter);
+  bottom: 1rem;
+  max-width: 34rem;
+  display: grid;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: var(--fg);
+  color: var(--bg);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+.consent .pill:hover {
+  background: var(--bg);
+  color: var(--fg);
+}
+.consent__actions {
+  display: flex;
+  gap: 0.75rem;
+}
+.footer__note .link {
+  letter-spacing: inherit;
+  text-transform: inherit;
+}
+
 /* ---------- Small screens ---------- */
 @media (max-width: 800px) {
   .hero__foot {

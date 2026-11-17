@@ -31,6 +31,14 @@ jobs:
         env:
           # Repository variable holding the URL of the deployed Firebase function.
           VITE_CONTACT_ENDPOINT: ${{ vars.CONTACT_ENDPOINT }}
+          # Firebase web app config for Analytics, stored as repository secrets.
+          # Note: these values are embedded in the public JS bundle at build time,
+          # so secrets storage only keeps them out of the repo; it does not make
+          # them private.
+          VITE_FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
+          VITE_FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
+          VITE_FIREBASE_APP_ID: ${{ secrets.FIREBASE_APP_ID }}
+          VITE_FIREBASE_MEASUREMENT_ID: ${{ secrets.FIREBASE_MEASUREMENT_ID }}
         run: npm run build
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

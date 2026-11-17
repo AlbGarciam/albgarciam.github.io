@@ -53,6 +53,22 @@ site shows a "form not connected" notice instead of the form.
 Optional params: `SMTP_HOST` (default `smtp.gmail.com`) and `ALLOWED_ORIGINS`
 (default `https://albgarciam.github.io`).
 
+### Analytics (Firebase)
+
+Visits and interactions are measured with Firebase Analytics (GA4), only after
+the visitor accepts the consent banner. Create a web app in the Firebase
+console (Project settings → Your apps), enable Google Analytics, and add these
+repository **secrets** (Settings → Secrets and variables → Actions →
+Secrets; `CONTACT_ENDPOINT` stays a variable): `FIREBASE_API_KEY`,
+`FIREBASE_PROJECT_ID`, `FIREBASE_APP_ID`, `FIREBASE_MEASUREMENT_ID`. Note that
+these values end up in the public JS bundle, so storing them as secrets only
+keeps them out of the repo; it does not make them private. Without them
+analytics stays disabled and the banner never shows.
+
+Custom events: `section_view`, `outbound_click`, `internal_link`,
+`menu_toggle`, `contact_submit` (plus GA4's automatic `page_view`, sessions and
+engagement). Code: `src/analytics.js`.
+
 ### Test
 
 ```bash
