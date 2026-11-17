@@ -157,6 +157,7 @@ export const projects = [
     platform: 'iOS · macOS',
     body: 'A game for iPhone and Mac, built with SceneKit for the world and SwiftUI for everything around it.',
     tags: ['SceneKit', 'SwiftUI', 'Game design'],
+    link: { label: 'On the App Store', href: 'https://apps.apple.com/us/app/lost-can-you-escape/id1666019387' },
   },
 ];
 

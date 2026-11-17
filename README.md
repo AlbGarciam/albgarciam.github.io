@@ -46,9 +46,10 @@ firebase functions:secrets:set ALTCHA_HMAC_SECRET    # any long random string
 firebase deploy --only functions
 ```
 
-Then add the function URL as the repository variable `CONTACT_ENDPOINT`
-(Settings → Secrets and variables → Actions → Variables). Until it is set, the
-site shows a "form not connected" notice instead of the form.
+The Pages workflow builds with the deployed function URL by default. To use a
+different endpoint, set the repository variable `CONTACT_ENDPOINT`
+(Settings → Secrets and variables → Actions → Variables); it overrides the
+default during the build.
 
 Optional params: `SMTP_HOST` (default `smtp.gmail.com`) and `ALLOWED_ORIGINS`
 (default `https://albgarciam.github.io`).
