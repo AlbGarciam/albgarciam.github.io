@@ -1,0 +1,19 @@
+{
+  "name": "portfolio-contact-function",
+  "private": true,
+  "type": "module",
+  "main": "index.js",
+  "engines": {
+    "node": "22"
+  },
+  "scripts": {
+    "test": "node --test",
+    "deploy": "firebase deploy --only functions"
+  },
+  "dependencies": {
+    "altcha-lib": "^2.8.0",
+    "firebase-admin": "^14.5.0",
+    "firebase-functions": "^7.4.0",
+    "nodemailer": "^10.5.0"
+  }
+}

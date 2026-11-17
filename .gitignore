@@ -1,3 +1,9 @@
 node_modules/
+dist/
 .cache/
 public
+.DS_Store
+.env*.local
+.firebase/
+functions/.secret.local
+*.log
