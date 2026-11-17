@@ -53,8 +53,8 @@ export function Nav() {
               {chapters.map((chapter, i) => (
                 <li key={chapter.id} className="menu__item">
                   <motion.a
-                    href={`#${chapter.id}`}
-                    onClick={go(chapter.id)}
+                    href={chapter.href ?? `#${chapter.id}`}
+                    onClick={chapter.href ? undefined : go(chapter.id)}
                     initial={{ y: '110%' }}
                     animate={{ y: '0%' }}
                     transition={{ duration: 0.8, ease: EASE, delay: 0.15 + i * 0.06 }}

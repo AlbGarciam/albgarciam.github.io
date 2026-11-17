@@ -10,7 +10,7 @@ export const person = {
 
 export const chapters = [
   { id: 'expertise', index: '01', label: 'Expertise' },
-  { id: 'journey', index: '02', label: 'Journey' },
+  { id: 'journey', index: '02', label: 'Journey', href: '/about/' },
   { id: 'work', index: '03', label: 'Selected work' },
   { id: 'toolbox', index: '04', label: 'Toolbox' },
   { id: 'writing', index: '05', label: 'Writing' },

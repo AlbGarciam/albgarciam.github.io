@@ -571,103 +571,102 @@ button {
   }
 }
 
-/* ---------- 02 Journey ---------- */
-.journey {
-  position: relative;
-  background: var(--bg);
+/* ---------- 02 Career teaser ---------- */
+.teaser {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem var(--gutter);
 }
-.journey__sticky {
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  height: 100svh;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: clamp(4.5rem, 10vh, 6rem) 0 clamp(1.5rem, 5vh, 3.5rem);
+.teaser__item {
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--hairline);
 }
-.journey__head {
-  padding-inline: var(--gutter);
-}
-.journey__head .chapter {
-  margin-bottom: 1.5rem;
-}
-.journey__head .chapter__title {
-  font-size: clamp(2.4rem, min(8vw, 13vh), 8rem);
-}
-.journey__head .chapter__meta {
-  padding-bottom: clamp(0.75rem, 2vh, 1.5rem);
-}
-.journey__track {
-  display: flex;
-  width: max-content;
-  padding-inline: var(--gutter);
-  will-change: transform;
-}
-.stop {
-  flex: none;
-  width: min(82vw, 30rem);
-  padding-right: 2.5rem;
-}
-.stop__period {
-  display: block;
-  font-size: clamp(2.6rem, min(6vw, 11vh), 5.5rem);
-  font-weight: 800;
-  font-stretch: 75%;
-  line-height: 1;
+.teaser__period {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  white-space: nowrap;
-  color: var(--bg);
-  -webkit-text-stroke: 2.5px color-mix(in srgb, var(--fg) 45%, var(--bg));
-  paint-order: stroke fill;
+  color: var(--lilac);
 }
-.stop__node {
-  position: relative;
-  display: block;
-  height: 1px;
-  margin: 1rem -2.5rem 1.4rem 0;
-  background: var(--hairline);
-}
-.stop__node::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: -5px;
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
-  background: var(--fg);
-}
-.stop__node[data-current='true']::before {
-  background: var(--flare);
-  box-shadow: 0 0 0 6px color-mix(in srgb, var(--flare) 30%, transparent);
-}
-.stop__company,
-.stop__school h3 {
-  font-size: clamp(2rem, min(4.4vw, 7vh), 4rem);
+.teaser__company {
+  margin-top: 0.6rem;
+  font-size: clamp(1.6rem, 3vw, 2.6rem);
   font-weight: 700;
   font-stretch: 75%;
   line-height: 0.95;
   text-transform: uppercase;
 }
-.stop__school h3 {
-  font-size: clamp(1.2rem, 1.8vw, 1.6rem);
+.teaser__role {
+  margin-top: 0.5rem;
+  color: var(--muted);
+}
+.teaser__more {
+  display: inline-block;
+  margin-top: clamp(2rem, 6vh, 3.5rem);
+}
+
+/* ---------- About page: career timeline ---------- */
+.about {
+  min-height: 100vh;
+  padding-top: clamp(7rem, 18vh, 11rem);
+}
+.about__intro {
+  max-width: 44rem;
+  margin-bottom: clamp(3rem, 8vh, 5rem);
+  color: var(--muted);
+  font-size: 1.15em;
+  line-height: 1.5;
+}
+.about__sub {
+  margin: clamp(4rem, 10vh, 7rem) 0 clamp(1.5rem, 4vh, 2.5rem);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--lilac);
+}
+.timeline {
+  position: relative;
+}
+.stop {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(8rem, 14rem) minmax(0, 1fr);
+  gap: 0.5rem var(--gutter);
+  padding: clamp(1.5rem, 4vh, 2.5rem) 0;
+  border-top: 1px solid var(--hairline);
+}
+.stop:last-child {
+  border-bottom: 1px solid var(--hairline);
+}
+.stop__period {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.stop[data-current='true'] .stop__period {
+  color: var(--flare);
+}
+.stop__company {
+  font-size: clamp(1.8rem, 3.6vw, 3.2rem);
+  font-weight: 700;
+  font-stretch: 75%;
+  line-height: 0.95;
+  text-transform: uppercase;
 }
 .stop__role {
   margin-top: 0.5rem;
   color: var(--lilac);
   font-weight: 500;
-  font-size: 1.1em;
 }
 .stop__body {
-  margin-top: 0.9rem;
+  margin-top: 0.8rem;
   color: var(--muted);
-  line-height: 1.45;
-  max-width: 34ch;
-}
-.stop__school + .stop__school {
-  margin-top: 1.25rem;
+  line-height: 1.5;
+  max-width: 52ch;
 }
 .stop__note {
   font-family: var(--mono);
@@ -676,19 +675,13 @@ button {
   text-transform: uppercase;
   margin-top: 0.4rem;
 }
-.stop--education {
-  width: min(88vw, 34rem);
-}
-/* Reduced motion: no pinning, the stops simply wrap. */
-.journey[data-static] .journey__sticky {
-  position: static;
-  height: auto;
-  overflow: visible;
-}
-.journey[data-static] .journey__track {
-  flex-wrap: wrap;
-  width: auto;
-  row-gap: 2.5rem;
+@media (max-width: 800px) {
+  .teaser {
+    grid-template-columns: 1fr;
+  }
+  .stop {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ---------- 03 Work ---------- */
