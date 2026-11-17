@@ -9,7 +9,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      input: { main: 'index.html', terms: 'terms/index.html' },
+      input: { main: 'index.html', terms: 'terms/index.html', about: 'about/index.html' },
     },
   },
 });

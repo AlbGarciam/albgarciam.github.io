@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 import { motion, useInView, useReducedMotion, useScroll, useTransform } from 'motion/react';
 import { education, expertise, journey, projects, toolbox, writing } from '../content.js';
 import { ProjectArt } from './Art.jsx';
@@ -34,72 +34,23 @@ export function Expertise() {
   );
 }
 
-/** Vertical scroll drives a horizontal track: the career reads like a film strip. */
+/** Short career teaser; the full timeline lives on /about/. */
 export function Journey() {
-  const section = useRef(null);
-  const track = useRef(null);
-  const reduced = useReducedMotion();
-  const [distance, setDistance] = useState(0);
-
-  useEffect(() => {
-    if (reduced) return undefined;
-    const measure = () => setDistance(Math.max(0, track.current.scrollWidth - window.innerWidth));
-    measure();
-    const observer = new ResizeObserver(measure);
-    observer.observe(track.current);
-    window.addEventListener('resize', measure);
-    return () => {
-      observer.disconnect();
-      window.removeEventListener('resize', measure);
-    };
-  }, [reduced]);
-
-  const { scrollYProgress } = useScroll({ target: section, offset: ['start start', 'end end'] });
-  const x = useTransform(scrollYProgress, [0, 1], [0, -distance]);
-
-  const cards = (
-    <>
-      {journey.map((job, i) => (
-        <article className="stop" key={job.period + job.company}>
-          <span className="stop__period">{job.period}</span>
-          <span className="stop__node" data-current={i === 0} />
-          <h3 className="stop__company">{job.company}</h3>
-          <p className="stop__role">{job.role}</p>
-          <p className="stop__body">{job.body}</p>
-        </article>
-      ))}
-      <article className="stop stop--education">
-        <span className="stop__period">Credentials</span>
-        <span className="stop__node" />
-        {education.map((item) => (
-          <div key={item.title} className="stop__school">
-            <h3>{item.title}</h3>
-            <p className="stop__role">
-              {item.place} · {item.period}
-            </p>
-            {item.note && <p className="stop__note">{item.note}</p>}
-          </div>
-        ))}
-      </article>
-    </>
-  );
-
   return (
-    <section
-      className="journey"
-      id="journey"
-      ref={section}
-      data-static={reduced || undefined}
-      style={reduced ? undefined : { height: `calc(100vh + ${distance}px)` }}
-    >
-      <div className="journey__sticky">
-        <div className="journey__head">
-          <ChapterHead index="02" label="Journey" title="The road *so *far" />
-        </div>
-        <motion.div className="journey__track" ref={track} style={reduced ? undefined : { x }}>
-          {cards}
-        </motion.div>
+    <section className="section" id="journey">
+      <ChapterHead index="02" label="Journey" title="The road *so *far" />
+      <div className="teaser">
+        {[journey[0], journey[3], journey[4]].map((job, i) => (
+          <FadeUp className="teaser__item" key={job.period + job.role} delay={i * 0.08}>
+            <span className="teaser__period">{job.period}</span>
+            <h3 className="teaser__company">{job.company}</h3>
+            <p className="teaser__role">{job.role}</p>
+          </FadeUp>
+        ))}
       </div>
+      <a className="link teaser__more" href="/about/">
+        Full career and credentials →
+      </a>
     </section>
   );
 }
